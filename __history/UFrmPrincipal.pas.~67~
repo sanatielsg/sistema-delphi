@@ -19,6 +19,8 @@ uses
   , UFrmRelBancos
   , UFrmRelEstoque
   , UFrmRelPedVenda
+  , UFrmRelCR
+  , UFrmRelTesouraria
   ;
 
 type
@@ -59,6 +61,8 @@ type
     procedure MniLanCaixasClick(Sender: TObject);
     procedure MniRelBancosClick(Sender: TObject);
     procedure MniRelEstoqueClick(Sender: TObject);
+    procedure MniRelPedVendaClick(Sender: TObject);
+    procedure MniRelCRClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -79,6 +83,9 @@ var
   FrmRelCaixas : TFrmRelCaixas;
   FrmRelBancos : TFrmRelBancos;
   FrmRelEstoque : TFrmRelEstoque;
+  FrmRelPedVenda : TFrmRelPedVenda;
+  FrmRelCR : TFrmRelCR;
+  FrmRelTesouraria : TFrmRelTesouraria;
 
 implementation
 
@@ -99,6 +106,8 @@ begin
   FrmRelCaixas   := TFrmRelCaixas.Create(Self);
   FrmRelBancos   := TFrmRelBancos.Create(Self);
   FrmRelEstoque  := TFrmRelEstoque.Create(Self);
+  FrmRelPedVenda := TFrmRelPedVenda.Create(Self);
+  FrmRelCR       := TFrmRelCR.Create(Self);
 end;
 
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
@@ -156,9 +165,19 @@ begin
   FrmRelClientes.ShowModal;
 end;
 
+procedure TFrmPrincipal.MniRelCRClick(Sender: TObject);
+begin
+  FrmRelCR.ShowModal;
+end;
+
 procedure TFrmPrincipal.MniRelEstoqueClick(Sender: TObject);
 begin
   FrmRelEstoque.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniRelPedVendaClick(Sender: TObject);
+begin
+  FrmRelPedVenda.ShowModal;
 end;
 
 procedure TFrmPrincipal.MniRelProdutosClick(Sender: TObject);

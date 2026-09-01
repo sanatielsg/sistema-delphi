@@ -185,6 +185,14 @@
             <Form>FrmRelPedVenda</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrmRelCR.pas">
+            <Form>FrmRelCR</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UFrmRelTesouraria.pas">
+            <Form>FrmRelTesouraria</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
