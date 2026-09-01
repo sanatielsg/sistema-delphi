@@ -52,6 +52,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object MniLanTesouraria: TMenuItem
         Caption = 'Tesouraria'
+        OnClick = MniLanTesourariaClick
       end
     end
     object MnuRelatorios: TMenuItem
