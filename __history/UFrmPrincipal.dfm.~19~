@@ -33,27 +33,33 @@ object FrmPrincipal: TFrmPrincipal
       end
       object MniCadBancos: TMenuItem
         Caption = 'Bancos'
+        OnClick = MniCadBancosClick
       end
     end
     object MnuLancamentos: TMenuItem
       Caption = 'Lan'#231'amentos'
       object MniLanEstoque: TMenuItem
         Caption = 'Estoque'
+        OnClick = MniLanEstoqueClick
       end
-      object MniLanPedVendas: TMenuItem
-        Caption = 'Pedido de Venda'
+      object MniLanPedVenda: TMenuItem
+        Caption = 'Pedidos de Venda'
+        OnClick = MniLanPedVendaClick
       end
       object MniLanCR: TMenuItem
         Caption = 'Contas a Receber'
+        OnClick = MniLanCRClick
       end
       object MniLanTesouraria: TMenuItem
         Caption = 'Tesouraria'
+        OnClick = MniLanTesourariaClick
       end
     end
     object MnuRelatorios: TMenuItem
       Caption = 'Relat'#243'rios'
       object MniRelProdutos: TMenuItem
         Caption = 'Produtos'
+        OnClick = MniRelProdutosClick
       end
       object MniRelClientes: TMenuItem
         Caption = 'Clientes'
@@ -67,7 +73,7 @@ object FrmPrincipal: TFrmPrincipal
       object MniRelEstoque: TMenuItem
         Caption = 'Estoque'
       end
-      object MniRelPedVendas: TMenuItem
+      object MniRelPedVenda: TMenuItem
         Caption = 'Pedidos de Venda'
       end
       object MniRelCR: TMenuItem

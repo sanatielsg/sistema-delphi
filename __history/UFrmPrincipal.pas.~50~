@@ -13,6 +13,10 @@ uses
   , UFrmLanPedVenda
   , UFrmLanCR
   , UFrmLanTesouraria
+  , UFrmRelProdutos
+  , UFrmRelClientes
+  , UFrmRelCaixas
+  , UFrmRelBancos
   ;
 
 type
@@ -47,6 +51,10 @@ type
     procedure MniLanEstoqueClick(Sender: TObject);
     procedure MniLanPedVendaClick(Sender: TObject);
     procedure MniLanCRClick(Sender: TObject);
+    procedure MniLanTesourariaClick(Sender: TObject);
+    procedure MniRelProdutosClick(Sender: TObject);
+    procedure MniRelClientesClick(Sender: TObject);
+    procedure MniLanCaixasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,6 +70,10 @@ var
   FrmLanPedVenda : TFrmLanPedVenda;
   FrmLanCR : TFrmLanCR;
   FrmLanTesouraria : TFrmLanTesouraria;
+  FrmRelProdutos : TFrmRelProdutos;
+  FrmRelClientes : TFrmRelClientes;
+  FrmRelCaixas : TFrmRelCaixas;
+  FrmRelBancos : TFrmRelBancos;
 
 implementation
 
@@ -76,6 +88,11 @@ begin
   FrmLanEstoque  := TFrmLanEstoque.Create(Self);
   FrmLanPedVenda := TFrmLanPedVenda.Create(Self);
   FrmLanCR       := TFrmLanCR.Create(Self);
+  FrmLanTesouraria := TFrmLanTesouraria.Create(Self);
+  FrmRelProdutos := TFrmRelProdutos.Create(Self);
+  FrmRelClientes := TFrmRelClientes.Create(Self);
+  FrmRelCaixas   := TFrmRelCaixas.Create(Self);
+  FrmRelBancos   := TFrmRelBancos.Create(Self);
 end;
 
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
@@ -98,6 +115,11 @@ begin
   FrmCadProdutos.ShowModal;
 end;
 
+procedure TFrmPrincipal.MniLanCaixasClick(Sender: TObject);
+begin
+  FrmRelCaixas.ShowModal;
+end;
+
 procedure TFrmPrincipal.MniLanCRClick(Sender: TObject);
 begin
   FrmLanCR.ShowModal;
@@ -111,6 +133,21 @@ end;
 procedure TFrmPrincipal.MniLanPedVendaClick(Sender: TObject);
 begin
   FrmLanPedVenda.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniLanTesourariaClick(Sender: TObject);
+begin
+  FrmLanTesouraria.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniRelClientesClick(Sender: TObject);
+begin
+  FrmRelClientes.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniRelProdutosClick(Sender: TObject);
+begin
+  FrmRelProdutos.ShowModal;
 end;
 
 end.

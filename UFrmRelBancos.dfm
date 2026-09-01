@@ -1,7 +1,7 @@
-object FrmRelProdutos: TFrmRelProdutos
+object FrmRelBancos: TFrmRelBancos
   Left = 0
   Top = 0
-  Caption = 'Relat'#243'rios de Produtos'
+  Caption = 'Relat'#243'rios de Bancos'
   ClientHeight = 441
   ClientWidth = 624
   Color = clBtnFace
@@ -10,6 +10,5 @@ object FrmRelProdutos: TFrmRelProdutos
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poScreenCenter
   TextHeight = 15
 end

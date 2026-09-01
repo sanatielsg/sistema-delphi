@@ -1,7 +1,7 @@
-object FrmRelProdutos: TFrmRelProdutos
+object FrmRelClientes: TFrmRelClientes
   Left = 0
   Top = 0
-  Caption = 'Relat'#243'rios de Produtos'
+  Caption = 'Relat'#243'rios de Clientes'
   ClientHeight = 441
   ClientWidth = 624
   Color = clBtnFace

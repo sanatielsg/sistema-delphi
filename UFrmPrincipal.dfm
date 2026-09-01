@@ -63,12 +63,15 @@ object FrmPrincipal: TFrmPrincipal
       end
       object MniRelClientes: TMenuItem
         Caption = 'Clientes'
+        OnClick = MniRelClientesClick
       end
       object MniLanCaixas: TMenuItem
         Caption = 'Caixas'
+        OnClick = MniLanCaixasClick
       end
       object MniRelBancos: TMenuItem
         Caption = 'Bancos'
+        OnClick = MniRelBancosClick
       end
       object MniRelEstoque: TMenuItem
         Caption = 'Estoque'
