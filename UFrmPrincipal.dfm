@@ -75,6 +75,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object MniRelEstoque: TMenuItem
         Caption = 'Estoque'
+        OnClick = MniRelEstoqueClick
       end
       object MniRelPedVenda: TMenuItem
         Caption = 'Pedidos de Venda'

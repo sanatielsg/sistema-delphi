@@ -11,11 +11,7 @@ uses
   UFrmLanPedVenda in 'UFrmLanPedVenda.pas' {FrmLanPedVenda},
   UFrmLanCR in 'UFrmLanCR.pas' {FrmLanCR},
   UFrmLanTesouraria in 'UFrmLanTesouraria.pas' {FrmLanTesouraria},
-  UFrmRelProdutos in 'UFrmRelProdutos.pas' {FrmRelProdutos},
-  UFrmRelClientes in 'UFrmRelClientes.pas' {FrmRelClientes},
-  UFrmRelCaixas in 'UFrmRelCaixas.pas' {FrmRelCaixas},
-  UFrmRelBancos in 'UFrmRelBancos.pas' {FrmRelBancos},
-  UFrmRelEstoque in 'UFrmRelEstoque.pas' {FrmRelEstoque};
+  UFrmRelProdutos in 'UFrmRelProdutos.pas' {FrmRelProdutos};
 
 {$R *.res}
 
@@ -31,9 +27,5 @@ begin
   Application.CreateForm(TFrmLanCR, FrmLanCR);
   Application.CreateForm(TFrmLanTesouraria, FrmLanTesouraria);
   Application.CreateForm(TFrmRelProdutos, FrmRelProdutos);
-  Application.CreateForm(TFrmRelClientes, FrmRelClientes);
-  Application.CreateForm(TFrmRelCaixas, FrmRelCaixas);
-  Application.CreateForm(TFrmRelBancos, FrmRelBancos);
-  Application.CreateForm(TFrmRelEstoque, FrmRelEstoque);
   Application.Run;
 end.

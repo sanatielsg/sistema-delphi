@@ -165,6 +165,22 @@
             <Form>FrmRelProdutos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrmRelClientes.pas">
+            <Form>FrmRelClientes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UFrmRelCaixas.pas">
+            <Form>FrmRelCaixas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UFrmRelBancos.pas">
+            <Form>FrmRelBancos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UFrmRelEstoque.pas">
+            <Form>FrmRelEstoque</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
