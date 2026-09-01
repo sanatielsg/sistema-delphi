@@ -48,6 +48,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object MniLanCR: TMenuItem
         Caption = 'Contas a Receber'
+        OnClick = MniLanCRClick
       end
       object MniLanTesouraria: TMenuItem
         Caption = 'Tesouraria'

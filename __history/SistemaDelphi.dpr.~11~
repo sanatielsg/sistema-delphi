@@ -8,8 +8,7 @@ uses
   UFrmCadCaixas in 'UFrmCadCaixas.pas' {FrmCadCaixas},
   UFrmCadBancos in 'UFrmCadBancos.pas' {FrmCadBancos},
   UFrmLanEstoque in 'UFrmLanEstoque.pas' {FrmLanEstoque},
-  UFrmLanPedVenda in 'UFrmLanPedVenda.pas' {FrmLanPedVenda},
-  UFrmLanCR in 'UFrmLanCR.pas' {FrmLanCR};
+  UFrmLanPedVenda in 'UFrmLanPedVenda.pas' {FrmLanPedVenda};
 
 {$R *.res}
 
@@ -22,6 +21,5 @@ begin
   Application.CreateForm(TFrmCadBancos, FrmCadBancos);
   Application.CreateForm(TFrmLanEstoque, FrmLanEstoque);
   Application.CreateForm(TFrmLanPedVenda, FrmLanPedVenda);
-  Application.CreateForm(TFrmLanCR, FrmLanCR);
   Application.Run;
 end.

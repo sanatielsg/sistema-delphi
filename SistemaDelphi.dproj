@@ -153,6 +153,10 @@
             <Form>FrmLanPedVenda</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrmLanCR.pas">
+            <Form>FrmLanCR</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
