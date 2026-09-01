@@ -157,6 +157,14 @@
             <Form>FrmLanCR</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrmLanTesouraria.pas">
+            <Form>FrmLanTesouraria</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UFrmRelProdutos.pas">
+            <Form>FrmRelProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

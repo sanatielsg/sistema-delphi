@@ -9,9 +9,7 @@ uses
   UFrmCadBancos in 'UFrmCadBancos.pas' {FrmCadBancos},
   UFrmLanEstoque in 'UFrmLanEstoque.pas' {FrmLanEstoque},
   UFrmLanPedVenda in 'UFrmLanPedVenda.pas' {FrmLanPedVenda},
-  UFrmLanCR in 'UFrmLanCR.pas' {FrmLanCR},
-  UFrmLanTesouraria in 'UFrmLanTesouraria.pas' {FrmLanTesouraria},
-  UFrmRelProdutos in 'UFrmRelProdutos.pas' {FrmRelProdutos};
+  UFrmLanCR in 'UFrmLanCR.pas' {FrmLanCR};
 
 {$R *.res}
 
@@ -25,7 +23,5 @@ begin
   Application.CreateForm(TFrmLanEstoque, FrmLanEstoque);
   Application.CreateForm(TFrmLanPedVenda, FrmLanPedVenda);
   Application.CreateForm(TFrmLanCR, FrmLanCR);
-  Application.CreateForm(TFrmLanTesouraria, FrmLanTesouraria);
-  Application.CreateForm(TFrmRelProdutos, FrmRelProdutos);
   Application.Run;
 end.

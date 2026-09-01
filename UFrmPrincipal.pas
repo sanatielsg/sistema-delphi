@@ -13,6 +13,7 @@ uses
   , UFrmLanPedVenda
   , UFrmLanCR
   , UFrmLanTesouraria
+  , UFrmRelProdutos
   ;
 
 type
@@ -48,6 +49,7 @@ type
     procedure MniLanPedVendaClick(Sender: TObject);
     procedure MniLanCRClick(Sender: TObject);
     procedure MniLanTesourariaClick(Sender: TObject);
+    procedure MniRelProdutosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,6 +65,7 @@ var
   FrmLanPedVenda : TFrmLanPedVenda;
   FrmLanCR : TFrmLanCR;
   FrmLanTesouraria : TFrmLanTesouraria;
+  FrmRelProdutos : TFrmRelProdutos;
 
 implementation
 
@@ -78,6 +81,7 @@ begin
   FrmLanPedVenda := TFrmLanPedVenda.Create(Self);
   FrmLanCR       := TFrmLanCR.Create(Self);
   FrmLanTesouraria := TFrmLanTesouraria.Create(Self);
+  FrmRelProdutos := TFrmRelProdutos.Create(Self);
 end;
 
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
@@ -118,6 +122,11 @@ end;
 procedure TFrmPrincipal.MniLanTesourariaClick(Sender: TObject);
 begin
   FrmLanTesouraria.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniRelProdutosClick(Sender: TObject);
+begin
+  FrmRelProdutos.ShowModal;
 end;
 
 end.

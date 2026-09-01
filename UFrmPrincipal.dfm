@@ -59,6 +59,7 @@ object FrmPrincipal: TFrmPrincipal
       Caption = 'Relat'#243'rios'
       object MniRelProdutos: TMenuItem
         Caption = 'Produtos'
+        OnClick = MniRelProdutosClick
       end
       object MniRelClientes: TMenuItem
         Caption = 'Clientes'
