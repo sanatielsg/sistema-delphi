@@ -9,6 +9,8 @@ uses
   , UFrmCadClientes
   , UFrmCadCaixas
   , UFrmCadBancos
+  , UFrmLanEstoque
+  , UFrmLanPedVenda
   ;
 
 type
@@ -19,7 +21,7 @@ type
     MniCadProdutos: TMenuItem;
     MniCadClientes: TMenuItem;
     MniLanEstoque: TMenuItem;
-    MniLanPedVendas: TMenuItem;
+    MniLanPedVenda: TMenuItem;
     MniLanCR: TMenuItem;
     MniLanTesouraria: TMenuItem;
     MniCadCaixas: TMenuItem;
@@ -30,7 +32,7 @@ type
     MniLanCaixas: TMenuItem;
     MniRelBancos: TMenuItem;
     MniRelEstoque: TMenuItem;
-    MniRelPedVendas: TMenuItem;
+    MniRelPedVenda: TMenuItem;
     MniRelCR: TMenuItem;
     MniRelTesouraria: TMenuItem;
     MnuSistema: TMenuItem;
@@ -40,6 +42,8 @@ type
     procedure MniCadClientesClick(Sender: TObject);
     procedure MniCadCaixasClick(Sender: TObject);
     procedure MniCadBancosClick(Sender: TObject);
+    procedure MniLanEstoqueClick(Sender: TObject);
+    procedure MniLanPedVendaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,6 +55,8 @@ var
   FrmCadProdutos : TFrmCadProdutos;
   FrmCadCaixas : TFrmCadCaixas;
   FrmCadBancos : TFrmCadBancos;
+  FrmLanEstoque : TFrmLanEstoque;
+  FrmLanPedVenda : TFrmLanPedVenda;
 
 implementation
 
@@ -62,6 +68,8 @@ begin
   FrmCadClientes := TFrmCadClientes.Create(Self);
   FrmCadCaixas   := TFrmCadCaixas.Create(Self);
   FrmCadBancos   := TFrmCadBancos.Create(Self);
+  FrmLanEstoque  := TFrmLanEstoque.Create(Self);
+  FrmLanPedVenda := TFrmLanPedVenda.Create(Self);
 end;
 
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
@@ -82,6 +90,16 @@ end;
 procedure TFrmPrincipal.MniCadProdutosClick(Sender: TObject);
 begin
   FrmCadProdutos.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniLanEstoqueClick(Sender: TObject);
+begin
+  FrmLanEstoque.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniLanPedVendaClick(Sender: TObject);
+begin
+  FrmLanPedVenda.ShowModal;
 end;
 
 end.

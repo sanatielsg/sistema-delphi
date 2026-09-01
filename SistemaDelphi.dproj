@@ -145,6 +145,14 @@
             <Form>FrmCadBancos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrmLanEstoque.pas">
+            <Form>FrmLanEstoque</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UFrmLanPedVenda.pas">
+            <Form>FrmLanPedVenda</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

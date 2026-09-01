@@ -7,7 +7,10 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus
   , UFrmCadProdutos
   , UFrmCadClientes
-
+  , UFrmCadCaixas
+  , UFrmCadBancos
+  , UFrmLanEstoque
+  , UFrmLanPedVenda
   ;
 
 type
@@ -18,7 +21,7 @@ type
     MniCadProdutos: TMenuItem;
     MniCadClientes: TMenuItem;
     MniLanEstoque: TMenuItem;
-    MniLanPedVendas: TMenuItem;
+    MniLanPedVenda: TMenuItem;
     MniLanCR: TMenuItem;
     MniLanTesouraria: TMenuItem;
     MniCadCaixas: TMenuItem;
@@ -29,13 +32,17 @@ type
     MniLanCaixas: TMenuItem;
     MniRelBancos: TMenuItem;
     MniRelEstoque: TMenuItem;
-    MniRelPedVendas: TMenuItem;
+    MniRelPedVenda: TMenuItem;
     MniRelCR: TMenuItem;
     MniRelTesouraria: TMenuItem;
     MnuSistema: TMenuItem;
     MniSisAtuDB: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure MniCadProdutosClick(Sender: TObject);
+    procedure MniCadClientesClick(Sender: TObject);
+    procedure MniCadCaixasClick(Sender: TObject);
+    procedure MniCadBancosClick(Sender: TObject);
+    procedure MniLanEstoqueClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,7 +52,10 @@ type
 var
   FrmPrincipal: TFrmPrincipal;
   FrmCadProdutos : TFrmCadProdutos;
-
+  FrmCadCaixas : TFrmCadCaixas;
+  FrmCadBancos : TFrmCadBancos;
+  FrmLanEstoque : TFrmLanEstoque;
+  FrmLanPedVenda : TFrmLanPedVenda;
 
 implementation
 
@@ -54,11 +64,35 @@ implementation
 procedure TFrmPrincipal.FormCreate(Sender: TObject);
 begin
   FrmCadProdutos := TFrmCadProdutos.Create(Self);
+  FrmCadClientes := TFrmCadClientes.Create(Self);
+  FrmCadCaixas   := TFrmCadCaixas.Create(Self);
+  FrmCadBancos   := TFrmCadBancos.Create(Self);
+  FrmLanEstoque  := TFrmLanEstoque.Create(Self);
+end;
+
+procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
+begin
+  FrmCadBancos.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniCadCaixasClick(Sender: TObject);
+begin
+  FrmCadCaixas.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniCadClientesClick(Sender: TObject);
+begin
+  FrmCadClientes.ShowModal;
 end;
 
 procedure TFrmPrincipal.MniCadProdutosClick(Sender: TObject);
 begin
   FrmCadProdutos.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniLanEstoqueClick(Sender: TObject);
+begin
+  FrmLanEstoque.ShowModal;
 end;
 
 end.

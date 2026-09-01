@@ -40,9 +40,11 @@ object FrmPrincipal: TFrmPrincipal
       Caption = 'Lan'#231'amentos'
       object MniLanEstoque: TMenuItem
         Caption = 'Estoque'
+        OnClick = MniLanEstoqueClick
       end
-      object MniLanPedVendas: TMenuItem
-        Caption = 'Pedido de Venda'
+      object MniLanPedVenda: TMenuItem
+        Caption = 'Pedidos de Venda'
+        OnClick = MniLanPedVendaClick
       end
       object MniLanCR: TMenuItem
         Caption = 'Contas a Receber'
@@ -68,7 +70,7 @@ object FrmPrincipal: TFrmPrincipal
       object MniRelEstoque: TMenuItem
         Caption = 'Estoque'
       end
-      object MniRelPedVendas: TMenuItem
+      object MniRelPedVenda: TMenuItem
         Caption = 'Pedidos de Venda'
       end
       object MniRelCR: TMenuItem

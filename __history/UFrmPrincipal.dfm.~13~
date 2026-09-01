@@ -11,6 +11,8 @@ object FrmPrincipal: TFrmPrincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   Menu = MainMenu
+  WindowState = wsMaximized
+  OnCreate = FormCreate
   TextHeight = 15
   object MainMenu: TMainMenu
     Left = 96
@@ -19,24 +21,29 @@ object FrmPrincipal: TFrmPrincipal
       Caption = 'Cadastros'
       object MniCadProdutos: TMenuItem
         Caption = 'Produtos'
+        OnClick = MniCadProdutosClick
       end
       object MniCadClientes: TMenuItem
         Caption = 'Clientes'
+        OnClick = MniCadClientesClick
       end
       object MniCadCaixas: TMenuItem
         Caption = 'Caixas'
+        OnClick = MniCadCaixasClick
       end
       object MniCadBancos: TMenuItem
         Caption = 'Bancos'
+        OnClick = MniCadBancosClick
       end
     end
     object MnuLancamentos: TMenuItem
       Caption = 'Lan'#231'amentos'
       object MniLanEstoque: TMenuItem
         Caption = 'Estoque'
+        OnClick = MniLanEstoqueClick
       end
-      object MniLanPedVendas: TMenuItem
-        Caption = 'Pedido de Venda'
+      object MniLanPedVenda: TMenuItem
+        Caption = 'Pedidos de Venda'
       end
       object MniLanCR: TMenuItem
         Caption = 'Contas a Receber'
@@ -62,7 +69,7 @@ object FrmPrincipal: TFrmPrincipal
       object MniRelEstoque: TMenuItem
         Caption = 'Estoque'
       end
-      object MniRelPedVendas: TMenuItem
+      object MniRelPedVenda: TMenuItem
         Caption = 'Pedidos de Venda'
       end
       object MniRelCR: TMenuItem
