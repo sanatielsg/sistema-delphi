@@ -79,6 +79,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object MniRelPedVenda: TMenuItem
         Caption = 'Pedidos de Venda'
+        OnClick = MniRelPedVendaClick
       end
       object MniRelCR: TMenuItem
         Caption = 'Contas a Receber'
