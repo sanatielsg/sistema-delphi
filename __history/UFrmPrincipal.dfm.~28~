@@ -59,27 +59,35 @@ object FrmPrincipal: TFrmPrincipal
       Caption = 'Relat'#243'rios'
       object MniRelProdutos: TMenuItem
         Caption = 'Produtos'
+        OnClick = MniRelProdutosClick
       end
       object MniRelClientes: TMenuItem
         Caption = 'Clientes'
+        OnClick = MniRelClientesClick
       end
       object MniLanCaixas: TMenuItem
         Caption = 'Caixas'
+        OnClick = MniLanCaixasClick
       end
       object MniRelBancos: TMenuItem
         Caption = 'Bancos'
+        OnClick = MniRelBancosClick
       end
       object MniRelEstoque: TMenuItem
         Caption = 'Estoque'
+        OnClick = MniRelEstoqueClick
       end
       object MniRelPedVenda: TMenuItem
         Caption = 'Pedidos de Venda'
+        OnClick = MniRelPedVendaClick
       end
       object MniRelCR: TMenuItem
         Caption = 'Contas a Receber'
+        OnClick = MniRelCRClick
       end
       object MniRelTesouraria: TMenuItem
         Caption = 'Tesouraria'
+        OnClick = MniRelTesourariaClick
       end
     end
     object MnuSistema: TMenuItem

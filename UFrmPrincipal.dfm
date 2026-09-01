@@ -94,6 +94,7 @@ object FrmPrincipal: TFrmPrincipal
       Caption = 'Sistema'
       object MniSisAtuDB: TMenuItem
         Caption = 'Atualizar Banco de Dados'
+        OnClick = MniSisAtuDBClick
       end
     end
   end

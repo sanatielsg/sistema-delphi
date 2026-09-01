@@ -21,6 +21,7 @@ uses
   , UFrmRelPedVenda
   , UFrmRelCR
   , UFrmRelTesouraria
+  , UFrmSisAtuDB
   ;
 
 type
@@ -64,6 +65,7 @@ type
     procedure MniRelPedVendaClick(Sender: TObject);
     procedure MniRelCRClick(Sender: TObject);
     procedure MniRelTesourariaClick(Sender: TObject);
+    procedure MniSisAtuDBClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -87,6 +89,7 @@ var
   FrmRelPedVenda : TFrmRelPedVenda;
   FrmRelCR : TFrmRelCR;
   FrmRelTesouraria : TFrmRelTesouraria;
+  FrmSisAtuDB : TFrmSisAtuDB;
 
 implementation
 
@@ -110,6 +113,7 @@ begin
   FrmRelPedVenda := TFrmRelPedVenda.Create(Self);
   FrmRelCR       := TFrmRelCR.Create(Self);
   FrmRelTesouraria := TFrmRelTesouraria.Create(Self);
+  FrmSisAtuDB    := TFrmSisAtuDB.Create(Self);
 end;
 
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
@@ -190,6 +194,11 @@ end;
 procedure TFrmPrincipal.MniRelTesourariaClick(Sender: TObject);
 begin
   FrmRelTesouraria.ShowModal;
+end;
+
+procedure TFrmPrincipal.MniSisAtuDBClick(Sender: TObject);
+begin
+  FrmSisAtuDB.ShowModal;
 end;
 
 end.

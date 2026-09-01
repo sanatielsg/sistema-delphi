@@ -193,6 +193,10 @@
             <Form>FrmRelTesouraria</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrmSisAtuDB.pas">
+            <Form>FrmSisAtuDB</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

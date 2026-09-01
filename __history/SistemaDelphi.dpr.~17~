@@ -18,8 +18,7 @@ uses
   UFrmRelEstoque in 'UFrmRelEstoque.pas' {FrmRelEstoque},
   UFrmRelPedVenda in 'UFrmRelPedVenda.pas' {FrmRelPedVenda},
   UFrmRelCR in 'UFrmRelCR.pas' {FrmRelCR},
-  UFrmRelTesouraria in 'UFrmRelTesouraria.pas' {FrmRelTesouraria},
-  UFrmSisAtuDB in 'UFrmSisAtuDB.pas' {FrmSisAtuDB};
+  UFrmRelTesouraria in 'UFrmRelTesouraria.pas' {FrmRelTesouraria};
 
 {$R *.res}
 
@@ -42,6 +41,5 @@ begin
   Application.CreateForm(TFrmRelPedVenda, FrmRelPedVenda);
   Application.CreateForm(TFrmRelCR, FrmRelCR);
   Application.CreateForm(TFrmRelTesouraria, FrmRelTesouraria);
-  Application.CreateForm(TFrmSisAtuDB, FrmSisAtuDB);
   Application.Run;
 end.
