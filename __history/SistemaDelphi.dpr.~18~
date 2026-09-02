@@ -19,8 +19,7 @@ uses
   UFrmRelPedVenda in 'UFrmRelPedVenda.pas' {FrmRelPedVenda},
   UFrmRelCR in 'UFrmRelCR.pas' {FrmRelCR},
   UFrmRelTesouraria in 'UFrmRelTesouraria.pas' {FrmRelTesouraria},
-  UFrmSisAtuDB in 'UFrmSisAtuDB.pas' {FrmSisAtuDB},
-  UDM in 'UDM.pas' {DM: TDataModule};
+  UFrmSisAtuDB in 'UFrmSisAtuDB.pas' {FrmSisAtuDB};
 
 {$R *.res}
 
@@ -28,6 +27,21 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
-  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFrmCadClientes, FrmCadClientes);
+  Application.CreateForm(TFrmCadCaixas, FrmCadCaixas);
+  Application.CreateForm(TFrmCadBancos, FrmCadBancos);
+  Application.CreateForm(TFrmLanEstoque, FrmLanEstoque);
+  Application.CreateForm(TFrmLanPedVenda, FrmLanPedVenda);
+  Application.CreateForm(TFrmLanCR, FrmLanCR);
+  Application.CreateForm(TFrmLanTesouraria, FrmLanTesouraria);
+  Application.CreateForm(TFrmRelProdutos, FrmRelProdutos);
+  Application.CreateForm(TFrmRelClientes, FrmRelClientes);
+  Application.CreateForm(TFrmRelCaixas, FrmRelCaixas);
+  Application.CreateForm(TFrmRelBancos, FrmRelBancos);
+  Application.CreateForm(TFrmRelEstoque, FrmRelEstoque);
+  Application.CreateForm(TFrmRelPedVenda, FrmRelPedVenda);
+  Application.CreateForm(TFrmRelCR, FrmRelCR);
+  Application.CreateForm(TFrmRelTesouraria, FrmRelTesouraria);
+  Application.CreateForm(TFrmSisAtuDB, FrmSisAtuDB);
   Application.Run;
 end.
