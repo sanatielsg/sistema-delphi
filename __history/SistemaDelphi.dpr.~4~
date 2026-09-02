@@ -3,7 +3,7 @@ program SistemaDelphi;
 uses
   Vcl.Forms,
   UFrmPrincipal in 'UFrmPrincipal.pas' {FrmPrincipal},
-  UFrmCadProdutos in 'UFrmCadProdutos.pas' {FrmCadProdutos};
+  UFrmCadProdutos in 'UFrmCadProdutos.pas' {Form1};
 
 {$R *.res}
 
@@ -11,5 +11,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
