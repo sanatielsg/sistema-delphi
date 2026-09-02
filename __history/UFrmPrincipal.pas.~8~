@@ -4,11 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus
-  , UFrmCadProdutos
-  , UFrmCadClientes
-
-  ;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, UFrmCadProdutos;
 
 type
   TFrmPrincipal = class(TForm)
@@ -36,7 +32,6 @@ type
     MniSisAtuDB: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure MniCadProdutosClick(Sender: TObject);
-    procedure MniCadClientesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,12 +50,6 @@ implementation
 procedure TFrmPrincipal.FormCreate(Sender: TObject);
 begin
   FrmCadProdutos := TFrmCadProdutos.Create(Self);
-  FrmCadClientes := TFrmCadClientes.Create(Self);
-end;
-
-procedure TFrmPrincipal.MniCadClientesClick(Sender: TObject);
-begin
-  FrmCadClientes.ShowModal;
 end;
 
 procedure TFrmPrincipal.MniCadProdutosClick(Sender: TObject);

@@ -24,7 +24,6 @@ object FrmPrincipal: TFrmPrincipal
       end
       object MniCadClientes: TMenuItem
         Caption = 'Clientes'
-        OnClick = MniCadClientesClick
       end
       object MniCadCaixas: TMenuItem
         Caption = 'Caixas'

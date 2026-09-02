@@ -133,6 +133,10 @@
             <Form>FrmCadProdutos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrmCadClientes.pas">
+            <Form>FrmCadClientes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

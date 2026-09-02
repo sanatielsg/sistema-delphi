@@ -55,7 +55,6 @@ implementation
 procedure TFrmPrincipal.FormCreate(Sender: TObject);
 begin
   FrmCadProdutos := TFrmCadProdutos.Create(Self);
-  FrmCadClientes := TFrmCadClientes.Create(Self);
 end;
 
 procedure TFrmPrincipal.MniCadClientesClick(Sender: TObject);
