@@ -33,7 +33,6 @@ object FrmPrincipal: TFrmPrincipal
       end
       object MniCadBancos: TMenuItem
         Caption = 'Bancos'
-        OnClick = MniCadBancosClick
       end
     end
     object MnuLancamentos: TMenuItem

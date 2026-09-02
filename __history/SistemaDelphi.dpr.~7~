@@ -5,8 +5,7 @@ uses
   UFrmPrincipal in 'UFrmPrincipal.pas' {FrmPrincipal},
   UFrmCadProdutos in 'UFrmCadProdutos.pas' {FrmCadProdutos},
   UFrmCadClientes in 'UFrmCadClientes.pas' {FrmCadClientes},
-  UFrmCadCaixas in 'UFrmCadCaixas.pas' {FrmCadCaixas},
-  UFrmCadBancos in 'UFrmCadBancos.pas' {FrmCadBancos};
+  UFrmCadCaixas in 'UFrmCadCaixas.pas' {FrmCadCaixas};
 
 {$R *.res}
 
@@ -16,6 +15,5 @@ begin
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.CreateForm(TFrmCadClientes, FrmCadClientes);
   Application.CreateForm(TFrmCadCaixas, FrmCadCaixas);
-  Application.CreateForm(TFrmCadBancos, FrmCadBancos);
   Application.Run;
 end.

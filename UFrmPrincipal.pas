@@ -8,6 +8,7 @@ uses
   , UFrmCadProdutos
   , UFrmCadClientes
   , UFrmCadCaixas
+  , UFrmCadBancos
   ;
 
 type
@@ -38,6 +39,7 @@ type
     procedure MniCadProdutosClick(Sender: TObject);
     procedure MniCadClientesClick(Sender: TObject);
     procedure MniCadCaixasClick(Sender: TObject);
+    procedure MniCadBancosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,6 +50,7 @@ var
   FrmPrincipal: TFrmPrincipal;
   FrmCadProdutos : TFrmCadProdutos;
   FrmCadCaixas : TFrmCadCaixas;
+  FrmCadBancos : TFrmCadBancos;
 
 implementation
 
@@ -58,6 +61,12 @@ begin
   FrmCadProdutos := TFrmCadProdutos.Create(Self);
   FrmCadClientes := TFrmCadClientes.Create(Self);
   FrmCadCaixas   := TFrmCadCaixas.Create(Self);
+  FrmCadBancos   := TFrmCadBancos.Create(Self);
+end;
+
+procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
+begin
+  FrmCadBancos.ShowModal;
 end;
 
 procedure TFrmPrincipal.MniCadCaixasClick(Sender: TObject);
