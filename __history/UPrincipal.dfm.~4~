@@ -13,8 +13,8 @@ object FrmPrincipal: TFrmPrincipal
   Menu = MainMenu
   TextHeight = 15
   object MainMenu: TMainMenu
-    Left = 96
-    Top = 40
+    Left = 136
+    Top = 48
     object MnuCadastros: TMenuItem
       Caption = 'Cadastros'
       object MniCadProdutos: TMenuItem
@@ -47,35 +47,29 @@ object FrmPrincipal: TFrmPrincipal
     end
     object MnuRelatorios: TMenuItem
       Caption = 'Relat'#243'rios'
-      object MniRelProdutos: TMenuItem
+      object Produtos3: TMenuItem
         Caption = 'Produtos'
       end
-      object MniRelClientes: TMenuItem
+      object Produtos4: TMenuItem
         Caption = 'Clientes'
       end
-      object MniLanCaixas: TMenuItem
+      object Caixas3: TMenuItem
         Caption = 'Caixas'
       end
-      object MniRelBancos: TMenuItem
+      object Caixas4: TMenuItem
         Caption = 'Bancos'
       end
-      object MniRelEstoque: TMenuItem
+      object Estoque3: TMenuItem
         Caption = 'Estoque'
       end
-      object MniRelPedVendas: TMenuItem
+      object PedidosdeVenda1: TMenuItem
         Caption = 'Pedidos de Venda'
       end
-      object MniRelCR: TMenuItem
+      object PedidosdeVenda2: TMenuItem
         Caption = 'Contas a Receber'
       end
-      object MniRelTesouraria: TMenuItem
+      object esouraria1: TMenuItem
         Caption = 'Tesouraria'
-      end
-    end
-    object MnuSistema: TMenuItem
-      Caption = 'Sistema'
-      object MniSisAtuDB: TMenuItem
-        Caption = 'Atualizar Banco de Dados'
       end
     end
   end

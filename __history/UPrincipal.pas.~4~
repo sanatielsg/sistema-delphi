@@ -20,16 +20,14 @@ type
     MniCadCaixas: TMenuItem;
     MniCadBancos: TMenuItem;
     MnuRelatorios: TMenuItem;
-    MniRelProdutos: TMenuItem;
-    MniRelClientes: TMenuItem;
-    MniLanCaixas: TMenuItem;
-    MniRelBancos: TMenuItem;
-    MniRelEstoque: TMenuItem;
-    MniRelPedVendas: TMenuItem;
-    MniRelCR: TMenuItem;
-    MniRelTesouraria: TMenuItem;
-    MnuSistema: TMenuItem;
-    MniSisAtuDB: TMenuItem;
+    Produtos3: TMenuItem;
+    Produtos4: TMenuItem;
+    Caixas3: TMenuItem;
+    Caixas4: TMenuItem;
+    Estoque3: TMenuItem;
+    PedidosdeVenda1: TMenuItem;
+    PedidosdeVenda2: TMenuItem;
+    esouraria1: TMenuItem;
   private
     { Private declarations }
   public
