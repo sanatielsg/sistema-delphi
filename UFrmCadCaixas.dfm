@@ -1,7 +1,7 @@
-object FrmCadClientes: TFrmCadClientes
+object FrmCadCaixas: TFrmCadCaixas
   Left = 0
   Top = 0
-  Caption = 'Cadastro de Clientes'
+  Caption = 'Cadastro de Caixas'
   ClientHeight = 441
   ClientWidth = 624
   Color = clBtnFace

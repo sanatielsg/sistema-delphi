@@ -137,6 +137,10 @@
             <Form>FrmCadClientes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrmCadCaixas.pas">
+            <Form>FrmCadCaixas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

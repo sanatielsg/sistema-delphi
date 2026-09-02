@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus
   , UFrmCadProdutos
   , UFrmCadClientes
-
+  , UFrmCadCaixas
   ;
 
 type
@@ -37,6 +37,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure MniCadProdutosClick(Sender: TObject);
     procedure MniCadClientesClick(Sender: TObject);
+    procedure MniCadCaixasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,7 +47,7 @@ type
 var
   FrmPrincipal: TFrmPrincipal;
   FrmCadProdutos : TFrmCadProdutos;
-
+  FrmCadCaixas : TFrmCadCaixas;
 
 implementation
 
@@ -56,6 +57,12 @@ procedure TFrmPrincipal.FormCreate(Sender: TObject);
 begin
   FrmCadProdutos := TFrmCadProdutos.Create(Self);
   FrmCadClientes := TFrmCadClientes.Create(Self);
+  FrmCadCaixas   := TFrmCadCaixas.Create(Self);
+end;
+
+procedure TFrmPrincipal.MniCadCaixasClick(Sender: TObject);
+begin
+  FrmCadCaixas.ShowModal;
 end;
 
 procedure TFrmPrincipal.MniCadClientesClick(Sender: TObject);
