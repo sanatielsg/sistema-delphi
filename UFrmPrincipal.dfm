@@ -3,7 +3,7 @@ object FrmPrincipal: TFrmPrincipal
   Top = 0
   Caption = 'Sistema Delphi'
   ClientHeight = 441
-  ClientWidth = 624
+  ClientWidth = 721
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,9 +14,82 @@ object FrmPrincipal: TFrmPrincipal
   WindowState = wsMaximized
   OnCreate = FormCreate
   TextHeight = 15
+  object PnlMENUS: TPanel
+    Left = 0
+    Top = 0
+    Width = 721
+    Height = 57
+    Align = alTop
+    TabOrder = 0
+    ExplicitWidth = 624
+    object PnlINFO: TPanel
+      Left = 591
+      Top = 1
+      Width = 129
+      Height = 55
+      Align = alRight
+      BevelInner = bvLowered
+      TabOrder = 0
+      ExplicitLeft = 560
+      ExplicitTop = 3
+      ExplicitHeight = 51
+      object LblDATA: TLabel
+        Left = 8
+        Top = 9
+        Width = 37
+        Height = 17
+        Caption = 'Data.:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LblHORA: TLabel
+        Left = 8
+        Top = 32
+        Width = 38
+        Height = 17
+        Caption = 'Hora.:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LblDATAINFO: TLabel
+        Left = 51
+        Top = 8
+        Width = 68
+        Height = 17
+        Caption = '00/00/0000'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LblHORAINFO: TLabel
+        Left = 53
+        Top = 32
+        Width = 50
+        Height = 17
+        Caption = '00:00:00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+  end
   object MainMenu: TMainMenu
-    Left = 96
-    Top = 40
+    Left = 24
+    Top = 72
     object MnuCadastros: TMenuItem
       Caption = 'Cadastros'
       object MniCadProdutos: TMenuItem
@@ -96,6 +169,18 @@ object FrmPrincipal: TFrmPrincipal
         Caption = 'Atualizar Banco de Dados'
         OnClick = MniSisAtuDBClick
       end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Sair1: TMenuItem
+        Caption = '&Sair'
+        OnClick = Sair1Click
+      end
     end
+  end
+  object TmtINFO: TTimer
+    OnTimer = TmtINFOTimer
+    Left = 80
+    Top = 72
   end
 end

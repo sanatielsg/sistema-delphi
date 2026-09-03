@@ -22,7 +22,7 @@ uses
   , UFrmRelPedVenda
   , UFrmRelCR
   , UFrmRelTesouraria
-  , UFrmSisAtuDB
+  , UFrmSisAtuDB, Vcl.ExtCtrls, Vcl.StdCtrls
   ;
 
 type
@@ -49,6 +49,15 @@ type
     MniRelTesouraria: TMenuItem;
     MnuSistema: TMenuItem;
     MniSisAtuDB: TMenuItem;
+    N1: TMenuItem;
+    Sair1: TMenuItem;
+    PnlMENUS: TPanel;
+    PnlINFO: TPanel;
+    LblDATA: TLabel;
+    LblHORA: TLabel;
+    LblDATAINFO: TLabel;
+    LblHORAINFO: TLabel;
+    TmtINFO: TTimer;
     procedure FormCreate(Sender: TObject);
     procedure MniCadProdutosClick(Sender: TObject);
     procedure MniCadClientesClick(Sender: TObject);
@@ -67,6 +76,8 @@ type
     procedure MniRelCRClick(Sender: TObject);
     procedure MniRelTesourariaClick(Sender: TObject);
     procedure MniSisAtuDBClick(Sender: TObject);
+    procedure Sair1Click(Sender: TObject);
+    procedure TmtINFOTimer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -200,6 +211,17 @@ end;
 procedure TFrmPrincipal.MniSisAtuDBClick(Sender: TObject);
 begin
   FrmSisAtuDB.ShowModal;
+end;
+
+procedure TFrmPrincipal.Sair1Click(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TFrmPrincipal.TmtINFOTimer(Sender: TObject);
+begin
+LblDATAINFO.Caption := FormatDateTime('DD/MM/YYYY', now);
+LblHORAINFO.Caption := FormatDateTime('HH:MM:SS', now);
 end;
 
 end.
