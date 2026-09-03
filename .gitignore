@@ -1,1 +1,47 @@
-*.exe 
+# ====== Delphi 12 .gitignore ======
+
+# --- Arquivos de Compilação e Binários ---
+# Ignora executáveis, bibliotecas e pacotes compilados
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.dcu
+*.dres
+*.rsm
+*.map
+*.pif
+
+# --- Arquivos Históricos e Backups ---
+# Ignora arquivos criados automaticamente pelo Delphi para backup
+*.~*
+*.bak
+
+# --- Configurações Locais e do Usuário ---
+# Ignora configurações específicas da sua máquina/instalação
+*.local
+*.identcache
+*.tvsconfig
+*.dsk
+*.stat
+*.__history/
+*.__recovery/
+
+# --- Arquivos de Build e Plataformas ---
+# Ignora as pastas de saída de compilação automática (32-bit e 64-bit)
+Win32/
+Win64/
+Android/
+Android64/
+iOSDevice64/
+iOSSimulator/
+OSX64/
+OSXARM64/
+Linux64/
+
+# --- Arquivos de Teste e Cobertura ---
+*.pas.md5
+*.cov
+
+# --- Logs e Arquivos Temporários ---
+*.log
