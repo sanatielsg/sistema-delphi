@@ -86,7 +86,7 @@ type
 
 var
   FrmPrincipal: TFrmPrincipal;
-  FrmCadProdutos : TFrmCadProdutos;
+  ViewCadProdutos : TFrmCadProdutos;
   FrmCadCaixas : TFrmCadCaixas;
   FrmCadBancos : TFrmCadBancos;
   FrmLanEstoque : TFrmLanEstoque;
@@ -107,110 +107,174 @@ implementation
 
 {$R *.dfm}
 
-procedure TFrmPrincipal.FormCreate(Sender: TObject);
-begin
-  FrmCadProdutos := TFrmCadProdutos.Create(Self);
-  FrmCadClientes := TFrmCadClientes.Create(Self);
-  FrmCadCaixas   := TFrmCadCaixas.Create(Self);
-  FrmCadBancos   := TFrmCadBancos.Create(Self);
-  FrmLanEstoque  := TFrmLanEstoque.Create(Self);
-  FrmLanPedVenda := TFrmLanPedVenda.Create(Self);
-  FrmLanCR       := TFrmLanCR.Create(Self);
-  FrmLanTesouraria := TFrmLanTesouraria.Create(Self);
-  FrmRelProdutos := TFrmRelProdutos.Create(Self);
-  FrmRelClientes := TFrmRelClientes.Create(Self);
-  FrmRelCaixas   := TFrmRelCaixas.Create(Self);
-  FrmRelBancos   := TFrmRelBancos.Create(Self);
-  FrmRelEstoque  := TFrmRelEstoque.Create(Self);
-  FrmRelPedVenda := TFrmRelPedVenda.Create(Self);
-  FrmRelCR       := TFrmRelCR.Create(Self);
-  FrmRelTesouraria := TFrmRelTesouraria.Create(Self);
-  FrmSisAtuDB    := TFrmSisAtuDB.Create(Self);
-end;
-
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
 begin
-  FrmCadBancos.ShowModal;
+  FrmCadBancos := TFrmCadbancos.Create(Nil);
+  try
+    FrmCadBancos.ShowModal;
+  finally
+    FreeAndNil(FrmCadBancos)
+  end;
 end;
 
 procedure TFrmPrincipal.MniCadCaixasClick(Sender: TObject);
 begin
-  FrmCadCaixas.ShowModal;
+  FrmCadCaixas := TFrmCadCaixas.Create(Nil);
+  try
+    FrmCadCaixas.ShowModal;
+  finally
+    FreeAndNil(FrmCadCaixas);
+  end;
 end;
 
 procedure TFrmPrincipal.MniCadClientesClick(Sender: TObject);
 begin
-  FrmCadClientes.ShowModal;
+  FrmCadClientes := TFrmCadClientes.Create(Nil);
+  try
+    FrmCadClientes.ShowModal;
+  finally
+    FreeAndNil(FrmCadClientes);
+  end;
 end;
 
 procedure TFrmPrincipal.MniCadProdutosClick(Sender: TObject);
 begin
-  FrmCadProdutos.ShowModal;
+  FrmCadProdutos := TFrmCadProdutos.Create(Nil);
+  try
+    FrmCadProdutos.ShowModal;
+  finally
+    FreeAndNil(FrmCadProdutos);
+  end;
 end;
 
 procedure TFrmPrincipal.MniLanCaixasClick(Sender: TObject);
 begin
-  FrmRelCaixas.ShowModal;
+  FrmRelCaixas := TFrmRelCaixas.Create(Nil);
+  try
+    FrmRelCaixas.ShowModal;
+  finally
+    FreeAndNil(FrmRelCaixas);
+  end;
 end;
 
 procedure TFrmPrincipal.MniLanCRClick(Sender: TObject);
 begin
-  FrmLanCR.ShowModal;
+  FrmLanCR := TFrmLanCR.Create(Nil);
+  try
+    FrmLanCR.ShowModal;
+  finally
+    FreeAndNil(FrmLanCR);
+  end;
 end;
 
 procedure TFrmPrincipal.MniLanEstoqueClick(Sender: TObject);
 begin
-  FrmLanEstoque.ShowModal;
+  try
+    FrmLanEstoque := TFrmLanEstoque.Create(Nil);
+    FrmLanEstoque.ShowModal;
+  finally
+    FreeAndNil(FrmLanEstoque);
+  end;
 end;
 
 procedure TFrmPrincipal.MniLanPedVendaClick(Sender: TObject);
 begin
-  FrmLanPedVenda.ShowModal;
+  FrmLanPedVenda := TFrmLanPedVenda.Create(Nil);
+  try
+    FrmLanPedVenda.ShowModal;
+  finally
+    FreeAndNil(FrmLanPedVenda);
+  end;
 end;
 
 procedure TFrmPrincipal.MniLanTesourariaClick(Sender: TObject);
 begin
-  FrmLanTesouraria.ShowModal;
+  FrmLanTesouraria := TFrmLanTesouraria.Create(Nil);
+  try
+    FrmLanTesouraria.ShowModal;
+  finally
+    FreeAndNil(FrmLanTesouraria);
+  end;
 end;
 
 procedure TFrmPrincipal.MniRelBancosClick(Sender: TObject);
 begin
-  FrmRelBancos.ShowModal;
+  FrmRelBancos := TFrmRelBancos.Create(Nil);
+  try
+    FrmRelBancos.ShowModal;
+  finally
+    FreeAndNil(FrmRelBancos);
+  end;
 end;
 
 procedure TFrmPrincipal.MniRelClientesClick(Sender: TObject);
 begin
-  FrmRelClientes.ShowModal;
+  FrmRelClientes := TFrmRelClientes.Create(Nil);
+  try
+    FrmRelClientes.ShowModal;
+  finally
+    FreeAndNil(FrmRelClientes);
+  end;
 end;
 
 procedure TFrmPrincipal.MniRelCRClick(Sender: TObject);
 begin
-  FrmRelCR.ShowModal;
+  FrmRelCR := TFrmRelCR.Create(Nil);
+  try
+    FrmRelCR.ShowModal;
+  finally
+    FreeAndNil(FrmRelCR);
+  end;
 end;
 
 procedure TFrmPrincipal.MniRelEstoqueClick(Sender: TObject);
 begin
-  FrmRelEstoque.ShowModal;
+  FrmRelEstoque := TFrmRelEstoque.Create(Nil);
+  try
+    FrmRelEstoque.ShowModal;
+  finally
+    FreeAndNil(FrmRelEstoque);
+  end;
 end;
 
 procedure TFrmPrincipal.MniRelPedVendaClick(Sender: TObject);
 begin
-  FrmRelPedVenda.ShowModal;
+  FrmRelPedVenda := TFrmRelPedVenda.Create(Nil);
+  try
+    FrmRelPedVenda.ShowModal;
+  finally
+    FreeAndNil(FrmRelPedVenda);
+  end;
 end;
 
 procedure TFrmPrincipal.MniRelProdutosClick(Sender: TObject);
 begin
-  FrmRelProdutos.ShowModal;
+  FrmRelProdutos := TFrmRelProdutos.Create(Nil);
+  try
+    FrmRelProdutos.ShowModal;
+  finally
+    FreeAndNil(FrmRelProdutos);
+  end;
 end;
 
 procedure TFrmPrincipal.MniRelTesourariaClick(Sender: TObject);
 begin
-  FrmRelTesouraria.ShowModal;
+  FrmRelTesouraria := TFrmRelTesouraria.Create(Nil);
+  try
+    FrmRelTesouraria.ShowModal;
+  finally
+    FreeAndNil(FrmRelTesouraria);
+  end;
 end;
 
 procedure TFrmPrincipal.MniSisAtuDBClick(Sender: TObject);
 begin
-  FrmSisAtuDB.ShowModal;
+  FrmSisAtuDB := TFrmSisAtuDB.Create(Nil);
+  try
+    FrmSisAtuDB.ShowModal;
+  finally
+    FreeAndNil(FrmSisAtuDB);
+  end;
 end;
 
 procedure TFrmPrincipal.Sair1Click(Sender: TObject);
