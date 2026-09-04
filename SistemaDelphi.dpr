@@ -20,14 +20,16 @@ uses
   UFrmRelCR in 'UFrmRelCR.pas' {FrmRelCR},
   UFrmRelTesouraria in 'UFrmRelTesouraria.pas' {FrmRelTesouraria},
   UFrmSisAtuDB in 'UFrmSisAtuDB.pas' {FrmSisAtuDB},
-  UDM in 'UDM.pas' {DM: TDataModule};
+  UDM in 'UDM.pas' {DM: TDataModule},
+  USobre in 'USobre.pas' {FrmSobre};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrmSobre, FrmSobre);
   Application.Run;
 end.

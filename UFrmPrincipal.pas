@@ -3,27 +3,14 @@ unit UFrmPrincipal;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus
-  , UDM
-  , UFrmCadProdutos
-  , UFrmCadClientes
-  , UFrmCadCaixas
-  , UFrmCadBancos
-  , UFrmLanEstoque
-  , UFrmLanPedVenda
-  , UFrmLanCR
-  , UFrmLanTesouraria
-  , UFrmRelProdutos
-  , UFrmRelClientes
-  , UFrmRelCaixas
-  , UFrmRelBancos
-  , UFrmRelEstoque
-  , UFrmRelPedVenda
-  , UFrmRelCR
-  , UFrmRelTesouraria
-  , UFrmSisAtuDB, Vcl.ExtCtrls, Vcl.StdCtrls
-  ;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, UDM, UFrmCadProdutos,
+  UFrmCadClientes, UFrmCadCaixas, UFrmCadBancos, UFrmLanEstoque,
+  UFrmLanPedVenda, UFrmLanCR, UFrmLanTesouraria, UFrmRelProdutos,
+  UFrmRelClientes, UFrmRelCaixas, UFrmRelBancos, UFrmRelEstoque,
+  UFrmRelPedVenda, UFrmRelCR, UFrmRelTesouraria, UFrmSisAtuDB, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
 
 type
   TFrmPrincipal = class(TForm)
@@ -58,7 +45,7 @@ type
     LblDATAINFO: TLabel;
     LblHORAINFO: TLabel;
     TmtINFO: TTimer;
-    procedure FormCreate(Sender: TObject);
+    Sobre1: TMenuItem;
     procedure MniCadProdutosClick(Sender: TObject);
     procedure MniCadClientesClick(Sender: TObject);
     procedure MniCadCaixasClick(Sender: TObject);
@@ -78,6 +65,7 @@ type
     procedure MniSisAtuDBClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure TmtINFOTimer(Sender: TObject);
+    procedure Sobre1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -86,30 +74,32 @@ type
 
 var
   FrmPrincipal: TFrmPrincipal;
-  ViewCadProdutos : TFrmCadProdutos;
-  FrmCadCaixas : TFrmCadCaixas;
-  FrmCadBancos : TFrmCadBancos;
-  FrmLanEstoque : TFrmLanEstoque;
-  FrmLanPedVenda : TFrmLanPedVenda;
-  FrmLanCR : TFrmLanCR;
-  FrmLanTesouraria : TFrmLanTesouraria;
-  FrmRelProdutos : TFrmRelProdutos;
-  FrmRelClientes : TFrmRelClientes;
-  FrmRelCaixas : TFrmRelCaixas;
-  FrmRelBancos : TFrmRelBancos;
-  FrmRelEstoque : TFrmRelEstoque;
-  FrmRelPedVenda : TFrmRelPedVenda;
-  FrmRelCR : TFrmRelCR;
-  FrmRelTesouraria : TFrmRelTesouraria;
-  FrmSisAtuDB : TFrmSisAtuDB;
+  ViewCadProdutos: TFrmCadProdutos;
+  FrmCadCaixas: TFrmCadCaixas;
+  FrmCadBancos: TFrmCadBancos;
+  FrmLanEstoque: TFrmLanEstoque;
+  FrmLanPedVenda: TFrmLanPedVenda;
+  FrmLanCR: TFrmLanCR;
+  FrmLanTesouraria: TFrmLanTesouraria;
+  FrmRelProdutos: TFrmRelProdutos;
+  FrmRelClientes: TFrmRelClientes;
+  FrmRelCaixas: TFrmRelCaixas;
+  FrmRelBancos: TFrmRelBancos;
+  FrmRelEstoque: TFrmRelEstoque;
+  FrmRelPedVenda: TFrmRelPedVenda;
+  FrmRelCR: TFrmRelCR;
+  FrmRelTesouraria: TFrmRelTesouraria;
+  FrmSisAtuDB: TFrmSisAtuDB;
 
 implementation
 
 {$R *.dfm}
 
+uses USobre;
+
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
 begin
-  FrmCadBancos := TFrmCadbancos.Create(Nil);
+  FrmCadBancos := TFrmCadBancos.Create(Nil);
   try
     FrmCadBancos.ShowModal;
   finally
@@ -282,10 +272,20 @@ begin
   Application.Terminate;
 end;
 
+procedure TFrmPrincipal.Sobre1Click(Sender: TObject);
+begin
+  FrmSobre := TFrmSobre.Create(Nil);
+  try
+    FrmSobre.ShowModal;
+  finally
+    FreeAndNil(FrmSobre);
+  end;
+end;
+
 procedure TFrmPrincipal.TmtINFOTimer(Sender: TObject);
 begin
-LblDATAINFO.Caption := FormatDateTime('DD/MM/YYYY', now);
-LblHORAINFO.Caption := FormatDateTime('HH:MM:SS', now);
+  LblDATAINFO.Caption := FormatDateTime('DD/MM/YYYY', now);
+  LblHORAINFO.Caption := FormatDateTime('HH:MM:SS', now);
 end;
 
 end.
