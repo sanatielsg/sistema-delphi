@@ -103,6 +103,10 @@ object FrmPrincipal: TFrmPrincipal
         Caption = 'Bancos'
         OnClick = MniCadBancosClick
       end
+      object MniCadEmpresas: TMenuItem
+        Caption = 'Empresas'
+        OnClick = MniCadEmpresasClick
+      end
     end
     object MnuLancamentos: TMenuItem
       Caption = 'Lan'#231'amentos'

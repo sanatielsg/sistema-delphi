@@ -22,7 +22,10 @@ uses
   , UFrmRelPedVenda
   , UFrmRelCR
   , UFrmRelTesouraria
-  , UFrmSisAtuDB, Vcl.ExtCtrls, Vcl.StdCtrls
+  , UFrmSisAtuDB
+  , Vcl.ExtCtrls
+  , Vcl.StdCtrls
+  , UFrmCadEmpresa
   ;
 
 type
@@ -58,6 +61,7 @@ type
     LblDATAINFO: TLabel;
     LblHORAINFO: TLabel;
     TmtINFO: TTimer;
+    MniCadEmpresas: TMenuItem;
     procedure MniCadProdutosClick(Sender: TObject);
     procedure MniCadClientesClick(Sender: TObject);
     procedure MniCadCaixasClick(Sender: TObject);
@@ -77,6 +81,7 @@ type
     procedure MniSisAtuDBClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure TmtINFOTimer(Sender: TObject);
+    procedure MniCadEmpresasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -133,6 +138,16 @@ begin
     FrmCadClientes.ShowModal;
   finally
     FreeAndNil(FrmCadClientes);
+  end;
+end;
+
+procedure TFrmPrincipal.MniCadEmpresasClick(Sender: TObject);
+begin
+  FrmCadEmpresa := TFrmCadEmpresa.Create(Nil);
+  try
+    FrmCadEmpresa.ShowModal;
+  finally
+    FreeAndNil(FrmCadEmpresa);
   end;
 end;
 
