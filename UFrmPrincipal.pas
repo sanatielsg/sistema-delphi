@@ -58,7 +58,6 @@ type
     LblDATAINFO: TLabel;
     LblHORAINFO: TLabel;
     TmtINFO: TTimer;
-    procedure FormCreate(Sender: TObject);
     procedure MniCadProdutosClick(Sender: TObject);
     procedure MniCadClientesClick(Sender: TObject);
     procedure MniCadCaixasClick(Sender: TObject);

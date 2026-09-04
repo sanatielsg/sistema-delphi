@@ -20,7 +20,6 @@ object FrmPrincipal: TFrmPrincipal
     Height = 57
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 624
     object PnlINFO: TPanel
       Left = 591
       Top = 1
@@ -29,9 +28,6 @@ object FrmPrincipal: TFrmPrincipal
       Align = alRight
       BevelInner = bvLowered
       TabOrder = 0
-      ExplicitLeft = 560
-      ExplicitTop = 3
-      ExplicitHeight = 51
       object LblDATA: TLabel
         Left = 8
         Top = 9
