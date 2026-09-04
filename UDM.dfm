@@ -3,7 +3,6 @@ object DM: TDM
   Width = 320
   object Con: TFDConnection
     Params.Strings = (
-      'Database=C:\sistema-delphi\db\BANCO.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'Protocol=TCPIP'

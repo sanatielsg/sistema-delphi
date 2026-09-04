@@ -26,6 +26,7 @@ uses
   , Vcl.ExtCtrls
   , Vcl.StdCtrls
   , UFrmCadEmpresa
+  , System.IniFiles
   ;
 
 type
@@ -82,10 +83,12 @@ type
     procedure Sair1Click(Sender: TObject);
     procedure TmtINFOTimer(Sender: TObject);
     procedure MniCadEmpresasClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    procedure ConectarBancoDados;
   end;
 
 var
@@ -107,9 +110,39 @@ var
   FrmRelTesouraria : TFrmRelTesouraria;
   FrmSisAtuDB : TFrmSisAtuDB;
 
+
 implementation
 
 {$R *.dfm}
+
+procedure TFrmPrincipal.ConectarBancoDados;
+  var IniFile : TIniFile;
+      ArquivoIni: String;
+begin
+  try
+    ArquivoIni := ExtractFilePath(Application.ExeName) + 'config.ini';
+    if not FileExists(ArquivoIni) then
+      Raise Exception.Create('Arquivo .ini não existe!');
+    IniFile := TIniFile.Create(ArquivoIni);
+    try
+      DM.Con.Params.Database := IniFile.ReadString('banco','dbfile','');
+    finally
+      FreeAndNil(IniFile);
+    end;
+    DM.Con.Connected := True;
+  except
+  on E:Exception do
+    begin
+      ShowMessage('Ocorreu um erro ao contectar o banco de dados: '+E.Message);
+      Application.Terminate;
+    end;
+  end;
+end;
+
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+begin
+  ConectarBancoDados;
+end;
 
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
 begin
