@@ -27,6 +27,7 @@ uses
   , Vcl.StdCtrls
   , UFrmCadEmpresa
   , System.IniFiles
+  , USobre
   ;
 
 type
@@ -63,6 +64,7 @@ type
     LblHORAINFO: TLabel;
     TmtINFO: TTimer;
     MniCadEmpresas: TMenuItem;
+    Sobre1: TMenuItem;
     procedure MniCadProdutosClick(Sender: TObject);
     procedure MniCadClientesClick(Sender: TObject);
     procedure MniCadCaixasClick(Sender: TObject);
@@ -84,6 +86,7 @@ type
     procedure TmtINFOTimer(Sender: TObject);
     procedure MniCadEmpresasClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure Sobre1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -93,22 +96,22 @@ type
 
 var
   FrmPrincipal: TFrmPrincipal;
-  ViewCadProdutos : TFrmCadProdutos;
-  FrmCadCaixas : TFrmCadCaixas;
-  FrmCadBancos : TFrmCadBancos;
-  FrmLanEstoque : TFrmLanEstoque;
-  FrmLanPedVenda : TFrmLanPedVenda;
-  FrmLanCR : TFrmLanCR;
-  FrmLanTesouraria : TFrmLanTesouraria;
-  FrmRelProdutos : TFrmRelProdutos;
-  FrmRelClientes : TFrmRelClientes;
-  FrmRelCaixas : TFrmRelCaixas;
-  FrmRelBancos : TFrmRelBancos;
-  FrmRelEstoque : TFrmRelEstoque;
-  FrmRelPedVenda : TFrmRelPedVenda;
-  FrmRelCR : TFrmRelCR;
-  FrmRelTesouraria : TFrmRelTesouraria;
-  FrmSisAtuDB : TFrmSisAtuDB;
+  ViewCadProdutos: TFrmCadProdutos;
+  FrmCadCaixas: TFrmCadCaixas;
+  FrmCadBancos: TFrmCadBancos;
+  FrmLanEstoque: TFrmLanEstoque;
+  FrmLanPedVenda: TFrmLanPedVenda;
+  FrmLanCR: TFrmLanCR;
+  FrmLanTesouraria: TFrmLanTesouraria;
+  FrmRelProdutos: TFrmRelProdutos;
+  FrmRelClientes: TFrmRelClientes;
+  FrmRelCaixas: TFrmRelCaixas;
+  FrmRelBancos: TFrmRelBancos;
+  FrmRelEstoque: TFrmRelEstoque;
+  FrmRelPedVenda: TFrmRelPedVenda;
+  FrmRelCR: TFrmRelCR;
+  FrmRelTesouraria: TFrmRelTesouraria;
+  FrmSisAtuDB: TFrmSisAtuDB;
 
 
 implementation
@@ -122,7 +125,7 @@ begin
   try
     ArquivoIni := ExtractFilePath(Application.ExeName) + 'config.ini';
     if not FileExists(ArquivoIni) then
-      Raise Exception.Create('Arquivo .ini não existe!');
+      Raise Exception.Create('Arquivo .ini nï¿½o existe!');
     IniFile := TIniFile.Create(ArquivoIni);
     try
       DM.Con.Params.Database := IniFile.ReadString('banco','dbfile','');
@@ -146,7 +149,7 @@ end;
 
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
 begin
-  FrmCadBancos := TFrmCadbancos.Create(Nil);
+  FrmCadBancos := TFrmCadBancos.Create(Nil);
   try
     FrmCadBancos.ShowModal;
   finally
@@ -329,10 +332,20 @@ begin
   Application.Terminate;
 end;
 
+procedure TFrmPrincipal.Sobre1Click(Sender: TObject);
+begin
+  FrmSobre := TFrmSobre.Create(Nil);
+  try
+    FrmSobre.ShowModal;
+  finally
+    FreeAndNil(FrmSobre);
+  end;
+end;
+
 procedure TFrmPrincipal.TmtINFOTimer(Sender: TObject);
 begin
-LblDATAINFO.Caption := FormatDateTime('DD/MM/YYYY', now);
-LblHORAINFO.Caption := FormatDateTime('HH:MM:SS', now);
+  LblDATAINFO.Caption := FormatDateTime('DD/MM/YYYY', now);
+  LblHORAINFO.Caption := FormatDateTime('HH:MM:SS', now);
 end;
 
 end.
