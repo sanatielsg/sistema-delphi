@@ -205,6 +205,8 @@
         </DCCReference>
         <DCCReference Include="UFrmCadEmpresa.pas">
             <Form>FrmCadEmpresa</Form>
+        <DCCReference Include="USobre.pas">
+            <Form>FrmSobre</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

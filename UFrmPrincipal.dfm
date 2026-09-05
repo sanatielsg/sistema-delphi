@@ -172,6 +172,10 @@ object FrmPrincipal: TFrmPrincipal
       object N1: TMenuItem
         Caption = '-'
       end
+      object Sobre1: TMenuItem
+        Caption = '&Sobre'
+        OnClick = Sobre1Click
+      end
       object Sair1: TMenuItem
         Caption = '&Sair'
         OnClick = Sair1Click
