@@ -3,14 +3,32 @@ unit UFrmPrincipal;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
-  System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, UDM, UFrmCadProdutos,
-  UFrmCadClientes, UFrmCadCaixas, UFrmCadBancos, UFrmLanEstoque,
-  UFrmLanPedVenda, UFrmLanCR, UFrmLanTesouraria, UFrmRelProdutos,
-  UFrmRelClientes, UFrmRelCaixas, UFrmRelBancos, UFrmRelEstoque,
-  UFrmRelPedVenda, UFrmRelCR, UFrmRelTesouraria, UFrmSisAtuDB, Vcl.ExtCtrls,
-  Vcl.StdCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus
+  , UDM
+  , UFrmCadProdutos
+  , UFrmCadClientes
+  , UFrmCadCaixas
+  , UFrmCadBancos
+  , UFrmLanEstoque
+  , UFrmLanPedVenda
+  , UFrmLanCR
+  , UFrmLanTesouraria
+  , UFrmRelProdutos
+  , UFrmRelClientes
+  , UFrmRelCaixas
+  , UFrmRelBancos
+  , UFrmRelEstoque
+  , UFrmRelPedVenda
+  , UFrmRelCR
+  , UFrmRelTesouraria
+  , UFrmSisAtuDB
+  , Vcl.ExtCtrls
+  , Vcl.StdCtrls
+  , UFrmCadEmpresa
+  , System.IniFiles
+  , USobre
+  ;
 
 type
   TFrmPrincipal = class(TForm)
@@ -45,6 +63,7 @@ type
     LblDATAINFO: TLabel;
     LblHORAINFO: TLabel;
     TmtINFO: TTimer;
+    MniCadEmpresas: TMenuItem;
     Sobre1: TMenuItem;
     procedure MniCadProdutosClick(Sender: TObject);
     procedure MniCadClientesClick(Sender: TObject);
@@ -65,11 +84,14 @@ type
     procedure MniSisAtuDBClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure TmtINFOTimer(Sender: TObject);
+    procedure MniCadEmpresasClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
     procedure Sobre1Click(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    procedure ConectarBancoDados;
   end;
 
 var
@@ -91,11 +113,39 @@ var
   FrmRelTesouraria: TFrmRelTesouraria;
   FrmSisAtuDB: TFrmSisAtuDB;
 
+
 implementation
 
 {$R *.dfm}
 
-uses USobre;
+procedure TFrmPrincipal.ConectarBancoDados;
+  var IniFile : TIniFile;
+      ArquivoIni: String;
+begin
+  try
+    ArquivoIni := ExtractFilePath(Application.ExeName) + 'config.ini';
+    if not FileExists(ArquivoIni) then
+      Raise Exception.Create('Arquivo .ini n�o existe!');
+    IniFile := TIniFile.Create(ArquivoIni);
+    try
+      DM.Con.Params.Database := IniFile.ReadString('banco','dbfile','');
+    finally
+      FreeAndNil(IniFile);
+    end;
+    DM.Con.Connected := True;
+  except
+  on E:Exception do
+    begin
+      ShowMessage('Ocorreu um erro ao contectar o banco de dados: '+E.Message);
+      Application.Terminate;
+    end;
+  end;
+end;
+
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+begin
+  ConectarBancoDados;
+end;
 
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
 begin
@@ -124,6 +174,16 @@ begin
     FrmCadClientes.ShowModal;
   finally
     FreeAndNil(FrmCadClientes);
+  end;
+end;
+
+procedure TFrmPrincipal.MniCadEmpresasClick(Sender: TObject);
+begin
+  FrmCadEmpresa := TFrmCadEmpresa.Create(Nil);
+  try
+    FrmCadEmpresa.ShowModal;
+  finally
+    FreeAndNil(FrmCadEmpresa);
   end;
 end;
 
