@@ -19,6 +19,8 @@ type
     { Private declarations }
   public
     { Public declarations }
+    procedure AtualizarDB;
+    function GetVersaoDB: Integer;
   end;
 
 var
@@ -29,5 +31,17 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+{ TDM }
+
+procedure TDM.AtualizarDB;
+begin
+
+end;
+
+function TDM.GetVersaoDB: Integer;
+begin
+
+end;
 
 end.
