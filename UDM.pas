@@ -31,7 +31,7 @@ type
 
 var
   DM: TDM;
-  VersaoBanco: integer = 2;
+  VersaoBanco: integer = 4;
   Comandos : TStringList;
 
 implementation
@@ -88,6 +88,8 @@ begin
             + ' PAR_VERSAODB INTEGER DEFAULT 0 NOT NULL )');
     Insert(1, 'INSERT INTO PARAMETROS (PAR_ID) VALUES (1)');
     Insert(2, 'CREATE TABLE EMPRESAS (EMP_ID INTEGER NOT NULL PRIMARY KEY)');
+    Insert(3, 'ALTER TABLE EMPRESAS ADD EMP_RAZAO_SOCIAL VARCHAR(100) NOT NULL');
+    Insert(4, 'ALTER TABLE EMPRESAS ADD EMP_NOME_FANTASIA VARCHAR(100) NOT NULL');
   end;
 end;
 
@@ -95,7 +97,10 @@ procedure TDM.ExecutarComando(aComando: String);
 begin
  Qry.Close;
  Qry.SQL.Clear;
- Qry.ExecSQL(aComando);
+ try
+   Qry.ExecSQL(aComando);
+ except
+ end;
 end;
 
 function TDM.ExisteTabela(aTabela: String): Boolean;
