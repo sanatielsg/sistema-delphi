@@ -83,6 +83,16 @@ object FrmPrincipal: TFrmPrincipal
       end
     end
   end
+  object StatusBar: TStatusBar
+    Left = 0
+    Top = 422
+    Width = 721
+    Height = 19
+    Panels = <>
+    ExplicitLeft = 416
+    ExplicitTop = 392
+    ExplicitWidth = 0
+  end
   object MainMenu: TMainMenu
     Left = 24
     Top = 72

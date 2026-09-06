@@ -27,7 +27,7 @@ uses
   , Vcl.StdCtrls
   , UFrmCadEmpresa
   , System.IniFiles
-  , USobre
+  , USobre, Vcl.ComCtrls
   ;
 
 type
@@ -65,6 +65,7 @@ type
     TmtINFO: TTimer;
     MniCadEmpresas: TMenuItem;
     Sobre1: TMenuItem;
+    StatusBar: TStatusBar;
     procedure MniCadProdutosClick(Sender: TObject);
     procedure MniCadClientesClick(Sender: TObject);
     procedure MniCadCaixasClick(Sender: TObject);
