@@ -147,6 +147,8 @@ end;
 procedure TFrmPrincipal.FormShow(Sender: TObject);
 begin
   ConectarBancoDados;
+
+  StatusBar.Panels[1].Text := DM.Con.Params.Database;
 end;
 
 procedure TFrmPrincipal.MniCadBancosClick(Sender: TObject);
