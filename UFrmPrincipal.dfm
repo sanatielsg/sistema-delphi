@@ -88,10 +88,14 @@ object FrmPrincipal: TFrmPrincipal
     Top = 422
     Width = 721
     Height = 19
-    Panels = <>
-    ExplicitLeft = 416
-    ExplicitTop = 392
-    ExplicitWidth = 0
+    Panels = <
+      item
+        Text = 'Banco de dados:'
+        Width = 100
+      end
+      item
+        Width = 50
+      end>
   end
   object MainMenu: TMainMenu
     Left = 24
