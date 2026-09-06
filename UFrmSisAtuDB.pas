@@ -14,6 +14,7 @@ type
     Label1: TLabel;
     LblVersaoDB: TLabel;
     procedure BtnAtualizarDBClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,7 +30,18 @@ implementation
 
 procedure TFrmSisAtuDB.BtnAtualizarDBClick(Sender: TObject);
 begin
-  DM.AtualizarDB;
+  DM.AtualizarBanco();
+  LblVersaoDB.Caption := IntToStr(DM.GetVersaoDB);
+end;
+
+procedure TFrmSisAtuDB.FormShow(Sender: TObject);
+begin
+  try
+     LblVersaoDB.Caption := IntToStr(DM.GetVersaoDB);
+  except
+    on E:Exception do
+      ShowMessage('Ocorreu um erro: ' + E.Message);
+  end;
 end;
 
 end.
