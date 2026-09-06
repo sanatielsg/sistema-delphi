@@ -1,4 +1,4 @@
-unit UFrmPrincipal;
+﻿unit UFrmPrincipal;
 
 interface
 
@@ -125,10 +125,11 @@ begin
   try
     ArquivoIni := ExtractFilePath(Application.ExeName) + 'config.ini';
     if not FileExists(ArquivoIni) then
-      Raise Exception.Create('Arquivo .ini n�o existe!');
+      Raise Exception.Create('Arquivo .ini nao existe!');
     IniFile := TIniFile.Create(ArquivoIni);
     try
       DM.Con.Params.Database := IniFile.ReadString('banco','dbfile','');
+      DM.DriverLink.VendorLib := IniFile.ReadString('banco','lib','');
     finally
       FreeAndNil(IniFile);
     end;
