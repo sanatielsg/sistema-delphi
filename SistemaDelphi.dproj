@@ -210,6 +210,16 @@
             <Form>FrmSobre</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFraCadastro.pas">
+            <Form>FraCadastro</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="UDMCadastroAcoes.pas">
+            <Form>DMCadastroAcoes</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
