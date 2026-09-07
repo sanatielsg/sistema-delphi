@@ -21,8 +21,9 @@ uses
   UFrmRelTesouraria in 'UFrmRelTesouraria.pas' {FrmRelTesouraria},
   UFrmSisAtuDB in 'UFrmSisAtuDB.pas' {FrmSisAtuDB},
   UDM in 'UDM.pas' {DM: TDataModule},
-  UFrmCadEmpresa in 'UFrmCadEmpresa.pas' {FrmCadEmpresa},
-  USobre in 'USobre.pas' {FrmSobre};
+  USobre in 'USobre.pas' {FrmSobre},
+  UFrmCadPadrao in 'UFrmCadPadrao.pas' {FrmCadPadrao},
+  UFrmCadEmpresas in 'UFrmCadEmpresas.pas' {FrmCadEmpresas};
 
 {$R *.res}
 
@@ -31,6 +32,7 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.CreateForm(TDM, DM);
-  Application.CreateForm(TFrmSobre, FrmSobre);
+  Application.CreateForm(TFrmCadPadrao, FrmCadPadrao);
+  Application.CreateForm(TFrmCadEmpresas, FrmCadEmpresas);
   Application.Run;
 end.

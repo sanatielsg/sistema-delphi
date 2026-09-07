@@ -102,13 +102,17 @@ object FrmPrincipal: TFrmPrincipal
     Top = 72
     object MnuCadastros: TMenuItem
       Caption = 'Cadastros'
-      object MniCadProdutos: TMenuItem
-        Caption = 'Produtos'
-        OnClick = MniCadProdutosClick
+      object MniCadEmpresas: TMenuItem
+        Caption = 'Empresas'
+        OnClick = MniCadEmpresasClick
       end
       object MniCadClientes: TMenuItem
         Caption = 'Clientes'
         OnClick = MniCadClientesClick
+      end
+      object MniCadProdutos: TMenuItem
+        Caption = 'Produtos'
+        OnClick = MniCadProdutosClick
       end
       object MniCadCaixas: TMenuItem
         Caption = 'Caixas'
@@ -117,10 +121,6 @@ object FrmPrincipal: TFrmPrincipal
       object MniCadBancos: TMenuItem
         Caption = 'Bancos'
         OnClick = MniCadBancosClick
-      end
-      object MniCadEmpresas: TMenuItem
-        Caption = 'Empresas'
-        OnClick = MniCadEmpresasClick
       end
     end
     object MnuLancamentos: TMenuItem
