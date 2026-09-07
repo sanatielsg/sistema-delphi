@@ -203,25 +203,16 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="UFrmCadEmpresa.pas">
-            <Form>FrmCadEmpresa</Form>
-        </DCCReference>
         <DCCReference Include="USobre.pas">
             <Form>FrmSobre</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="UFraCadastro.pas">
-            <Form>FraCadastro</Form>
+        <DCCReference Include="UFrmCadPadrao.pas">
+            <Form>FrmCadPadrao</Form>
             <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="UDMCadastroAcoes.pas">
-            <Form>DMCadastroAcoes</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
-        <DCCReference Include="UFrmCadastroPadrao.pas">
-            <Form>page</Form>
+        <DCCReference Include="UFrmCadEmpresas.pas">
+            <Form>FrmCadEmpresas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

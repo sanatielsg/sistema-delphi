@@ -1,4 +1,4 @@
-unit UFrmCadastroPadrao;
+unit UFrmCadPadrao;
 
 interface
 
@@ -7,11 +7,11 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.StdCtrls;
 
 type
-  Tpage = class(TForm)
+  TFrmCadPadrao = class(TForm)
     StatusBar: TStatusBar;
     PageControl: TPageControl;
     TSCadastro: TTabSheet;
-    TSConsulta: TTabSheet;
+    TSPesquisa: TTabSheet;
     PnlCadTop: TPanel;
     PnlCadForm: TPanel;
     BtnCadNovo: TButton;
@@ -19,11 +19,16 @@ type
     BtnCadCancelar: TButton;
     BtnCadExcluir: TButton;
     BtnCadPesquisar: TButton;
-    EdtCadID: TEdit;
+    EdtCadCodigo: TEdit;
     BtnCadAnterior: TButton;
     BtnCadPrimeiro: TButton;
     BtnCadUltimo: TButton;
     BtnCadProximo: TButton;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Button1: TButton;
+    Edit1: TEdit;
+    CbxPesCriterios: TComboBox;
   private
     { Private declarations }
   public
@@ -31,7 +36,7 @@ type
   end;
 
 var
-  page: Tpage;
+  FrmCadPadrao: TFrmCadPadrao;
 
 implementation
 

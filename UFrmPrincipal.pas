@@ -25,7 +25,7 @@ uses
   , UFrmSisAtuDB
   , Vcl.ExtCtrls
   , Vcl.StdCtrls
-  , UFrmCadEmpresa
+  , UFrmCadEmpresas
   , System.IniFiles
   , USobre, Vcl.ComCtrls
   ;
@@ -183,11 +183,11 @@ end;
 
 procedure TFrmPrincipal.MniCadEmpresasClick(Sender: TObject);
 begin
-  FrmCadEmpresa := TFrmCadEmpresa.Create(Nil);
+  FrmCadEmpresas := TFrmCadEmpresas.Create(Nil);
   try
-    FrmCadEmpresa.ShowModal;
+    FrmCadEmpresas.ShowModal;
   finally
-    FreeAndNil(FrmCadEmpresa);
+    FreeAndNil(FrmCadEmpresas);
   end;
 end;
 
