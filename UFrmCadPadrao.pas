@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Data.DB, Vcl.Grids, Vcl.DBGrids;
 
 type
   TFrmCadPadrao = class(TForm)
@@ -26,9 +27,10 @@ type
     BtnCadProximo: TButton;
     Panel1: TPanel;
     Panel2: TPanel;
-    Button1: TButton;
-    Edit1: TEdit;
-    CbxPesCriterios: TComboBox;
+    BtnPesPesquisar: TButton;
+    EdtPesCriterio: TEdit;
+    CbxPesCriterio: TComboBox;
+    DBGPesPesquisar: TDBGrid;
   private
     { Private declarations }
   public

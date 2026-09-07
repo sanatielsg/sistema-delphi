@@ -15,6 +15,13 @@ type
     Con: TFDConnection;
     Qry: TFDQuery;
     DriverLink: TFDPhysFBDriverLink;
+    QryPesEmpresas: TFDQuery;
+    QryPesEmpresasEMP_ID: TIntegerField;
+    QryPesEmpresasEMP_RAZAO_SOCIAL: TStringField;
+    QryPesEmpresasEMP_NOME_FANTASIA: TStringField;
+    QryPesEmpresasEMP_CNPJ: TStringField;
+    QryPesEmpresasEMP_CPF: TStringField;
+    DSQryPesEmpresas: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -31,7 +38,7 @@ type
 
 var
   DM: TDM;
-  VersaoBanco: integer = 4;
+  VersaoBanco: integer = 6;
   Comandos : TStringList;
 
 implementation
@@ -90,6 +97,8 @@ begin
     Insert(2, 'CREATE TABLE EMPRESAS (EMP_ID INTEGER NOT NULL PRIMARY KEY)');
     Insert(3, 'ALTER TABLE EMPRESAS ADD EMP_RAZAO_SOCIAL VARCHAR(100) NOT NULL');
     Insert(4, 'ALTER TABLE EMPRESAS ADD EMP_NOME_FANTASIA VARCHAR(100) NOT NULL');
+    Insert(5, 'ALTER TABLE EMPRESAS ADD EMP_CNPJ VARCHAR(14) NOT NULL');
+    Insert(6, 'ALTER TABLE EMPRESAS ADD EMP_CPF VARCHAR(11) NOT NULL');
   end;
 end;
 

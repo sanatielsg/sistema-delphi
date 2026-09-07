@@ -147,7 +147,7 @@ object FrmCadPadrao: TFrmCadPadrao
         DesignSize = (
           616
           49)
-        object Button1: TButton
+        object BtnPesPesquisar: TButton
           Left = 494
           Top = 10
           Width = 106
@@ -156,7 +156,7 @@ object FrmCadPadrao: TFrmCadPadrao
           Caption = 'Pesquisar'
           TabOrder = 0
         end
-        object Edit1: TEdit
+        object EdtPesCriterio: TEdit
           Left = 104
           Top = 11
           Width = 382
@@ -164,7 +164,7 @@ object FrmCadPadrao: TFrmCadPadrao
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 1
         end
-        object CbxPesCriterios: TComboBox
+        object CbxPesCriterio: TComboBox
           Left = 10
           Top = 11
           Width = 88
@@ -184,10 +184,21 @@ object FrmCadPadrao: TFrmCadPadrao
         Height = 343
         Align = alClient
         TabOrder = 1
-        ExplicitLeft = 3
-        ExplicitTop = 95
-        ExplicitWidth = 610
-        ExplicitHeight = 294
+        ExplicitLeft = -40
+        ExplicitTop = 39
+        object DBGPesPesquisar: TDBGrid
+          Left = 1
+          Top = 1
+          Width = 614
+          Height = 341
+          Align = alClient
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+        end
       end
     end
   end
