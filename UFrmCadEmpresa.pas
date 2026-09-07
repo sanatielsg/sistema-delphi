@@ -14,7 +14,15 @@ type
     TSConsulta: TTabSheet;
     BotoesCadastro: TFraCadastro;
     PnlFormulario: TPanel;
-    LblRegistro: TLabel;
+    LblCadID: TLabel;
+    EdtCadRazaoSocial: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    EdtCadFantasia: TEdit;
+    Label3: TLabel;
+    EdtCadCNPJ: TEdit;
+    Label4: TLabel;
+    EdtCadCPF: TEdit;
   private
     { Private declarations }
   public

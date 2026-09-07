@@ -26,34 +26,32 @@ object FrmCadEmpresa: TFrmCadEmpresa
         Left = 0
         Top = 0
         Width = 616
-        Height = 107
+        Height = 91
         Align = alTop
         TabOrder = 0
-        ExplicitLeft = 67
-        ExplicitTop = 62
         inherited Panel: TPanel
-          Width = 616
           BevelOuter = bvNone
           Color = clKhaki
           ParentBackground = False
           StyleElements = [seFont, seClient, seBorder]
-          ExplicitLeft = -1
-          ExplicitWidth = 502
+          ExplicitWidth = 616
+          inherited EdtID: TEdit
+            StyleElements = [seFont, seClient, seBorder]
+          end
         end
       end
       object PnlFormulario: TPanel
         Left = 0
-        Top = 107
+        Top = 91
         Width = 616
-        Height = 304
+        Height = 320
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 32
-        ExplicitTop = 120
-        ExplicitWidth = 561
-        ExplicitHeight = 273
-        object LblRegistro: TLabel
+        ExplicitLeft = -141
+        ExplicitTop = -26
+        ExplicitHeight = 304
+        object LblCadID: TLabel
           Left = 16
           Top = 16
           Width = 11
@@ -65,6 +63,92 @@ object FrmCadEmpresa: TFrmCadEmpresa
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
+        end
+        object Label1: TLabel
+          Left = 16
+          Top = 53
+          Width = 68
+          Height = 15
+          Caption = 'Raz'#227'o Social'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label2: TLabel
+          Left = 303
+          Top = 53
+          Width = 44
+          Height = 15
+          Caption = 'Fantasia'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 16
+          Top = 99
+          Width = 27
+          Height = 16
+          Caption = 'CNPJ'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label4: TLabel
+          Left = 231
+          Top = 100
+          Width = 20
+          Height = 15
+          Caption = 'CPF'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object EdtCadRazaoSocial: TEdit
+          Left = 16
+          Top = 70
+          Width = 281
+          Height = 23
+          CharCase = ecUpperCase
+          MaxLength = 100
+          TabOrder = 0
+        end
+        object EdtCadFantasia: TEdit
+          Left = 303
+          Top = 70
+          Width = 281
+          Height = 23
+          CharCase = ecUpperCase
+          MaxLength = 100
+          TabOrder = 1
+        end
+        object EdtCadCNPJ: TEdit
+          Left = 16
+          Top = 117
+          Width = 209
+          Height = 23
+          CharCase = ecUpperCase
+          TabOrder = 2
+        end
+        object EdtCadCPF: TEdit
+          Left = 231
+          Top = 117
+          Width = 202
+          Height = 23
+          CharCase = ecUpperCase
+          TabOrder = 3
         end
       end
     end

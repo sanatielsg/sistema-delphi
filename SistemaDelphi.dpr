@@ -24,7 +24,8 @@ uses
   UFrmCadEmpresa in 'UFrmCadEmpresa.pas' {FrmCadEmpresa},
   USobre in 'USobre.pas' {FrmSobre},
   UFraCadastro in 'UFraCadastro.pas' {FraCadastro: TFrame},
-  UDMCadastroAcoes in 'UDMCadastroAcoes.pas' {DMCadastroAcoes: TDataModule};
+  UDMCadastroAcoes in 'UDMCadastroAcoes.pas' {DMCadastroAcoes: TDataModule},
+  UFrmCadastroPadrao in 'UFrmCadastroPadrao.pas' {page};
 
 {$R *.res}
 
@@ -35,5 +36,6 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrmSobre, FrmSobre);
   Application.CreateForm(TDMCadastroAcoes, DMCadastroAcoes);
+  Application.CreateForm(Tpage, page);
   Application.Run;
 end.
