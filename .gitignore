@@ -45,3 +45,6 @@ Linux64/
 
 # --- Logs e Arquivos Temporários ---
 *.log
+
+# --- arquivos de configuração ---
+*.ini
