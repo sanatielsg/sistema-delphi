@@ -215,6 +215,10 @@
             <Form>FrmCadEmpresas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrmRelEmpresas.pas">
+            <Form>FrmRelEmpresas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
