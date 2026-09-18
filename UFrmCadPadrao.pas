@@ -31,10 +31,22 @@ type
     EdtPesCriterio: TEdit;
     CbxPesCriterio: TComboBox;
     DBGPesPesquisar: TDBGrid;
+    procedure BtnCadNovoClick(Sender: TObject);
+    procedure BtnCadGravarClick(Sender: TObject);
+    procedure BtnCadCancelarClick(Sender: TObject);
+    procedure BtnCadExcluirClick(Sender: TObject);
+    procedure BtnCadPesquisarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
+    procedure AcoesBotaoNovo();
+    procedure AcoesBotaoGravar();
+    procedure AcoesBotaoCancelar();
+    procedure AcoesBotaoExcluir();
+    procedure AcoesBotaoPesquisar();
   public
     { Public declarations }
+
   end;
 
 var
@@ -43,5 +55,71 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmCadPadrao.AcoesBotaoCancelar;
+begin
+
+  AcoesBotaoGravar;
+end;
+
+procedure TFrmCadPadrao.AcoesBotaoExcluir;
+begin
+
+
+  AcoesBotaoGravar;
+end;
+
+procedure TFrmCadPadrao.AcoesBotaoGravar;
+begin
+  BtnCadNovo.Enabled      := True;
+  BtnCadGravar.Enabled    := False;
+  BtnCadCancelar.Enabled  := False;
+  BtnCadExcluir.Enabled   := False;
+  BtnCadPesquisar.Enabled := True;
+end;
+
+procedure TFrmCadPadrao.AcoesBotaoNovo;
+begin
+  BtnCadNovo.Enabled      := False;
+  BtnCadGravar.Enabled    := True;
+  BtnCadCancelar.Enabled  := True;
+  BtnCadExcluir.Enabled   := False;
+  BtnCadPesquisar.Enabled := False;
+end;
+
+procedure TFrmCadPadrao.AcoesBotaoPesquisar;
+begin
+  PageControl.TabIndex := 1;
+end;
+
+procedure TFrmCadPadrao.BtnCadCancelarClick(Sender: TObject);
+begin
+  AcoesBotaoCancelar;
+end;
+
+procedure TFrmCadPadrao.BtnCadExcluirClick(Sender: TObject);
+begin
+  AcoesBotaoExcluir;
+end;
+
+procedure TFrmCadPadrao.BtnCadGravarClick(Sender: TObject);
+begin
+  AcoesBotaoGravar;
+end;
+
+procedure TFrmCadPadrao.BtnCadNovoClick(Sender: TObject);
+begin
+  AcoesBotaoNovo;
+end;
+
+procedure TFrmCadPadrao.BtnCadPesquisarClick(Sender: TObject);
+begin
+  AcoesBotaoPesquisar;
+end;
+
+procedure TFrmCadPadrao.FormShow(Sender: TObject);
+begin
+  PageControl.TabIndex := 1;
+end;
 
 end.

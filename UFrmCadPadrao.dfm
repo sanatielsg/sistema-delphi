@@ -10,6 +10,7 @@ object FrmCadPadrao: TFrmCadPadrao
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnShow = FormShow
   TextHeight = 15
   object StatusBar: TStatusBar
     Left = 0
@@ -23,7 +24,7 @@ object FrmCadPadrao: TFrmCadPadrao
     Top = 0
     Width = 624
     Height = 422
-    ActivePage = TSPesquisa
+    ActivePage = TSCadastro
     Align = alClient
     TabOrder = 1
     object TSCadastro: TTabSheet
@@ -42,6 +43,7 @@ object FrmCadPadrao: TFrmCadPadrao
           Height = 57
           Caption = 'Novo'
           TabOrder = 0
+          OnClick = BtnCadNovoClick
         end
         object BtnCadGravar: TButton
           Left = 251
@@ -50,6 +52,7 @@ object FrmCadPadrao: TFrmCadPadrao
           Height = 57
           Caption = 'Gravar'
           TabOrder = 1
+          OnClick = BtnCadGravarClick
         end
         object BtnCadCancelar: TButton
           Left = 338
@@ -58,6 +61,7 @@ object FrmCadPadrao: TFrmCadPadrao
           Height = 57
           Caption = 'Cancelar'
           TabOrder = 2
+          OnClick = BtnCadCancelarClick
         end
         object BtnCadExcluir: TButton
           Left = 425
@@ -66,6 +70,7 @@ object FrmCadPadrao: TFrmCadPadrao
           Height = 57
           Caption = 'Excluir'
           TabOrder = 3
+          OnClick = BtnCadExcluirClick
         end
         object BtnCadPesquisar: TButton
           Left = 512
@@ -74,6 +79,7 @@ object FrmCadPadrao: TFrmCadPadrao
           Height = 57
           Caption = 'Pesquisar'
           TabOrder = 4
+          OnClick = BtnCadPesquisarClick
         end
         object EdtCadCodigo: TEdit
           Left = 11
@@ -130,8 +136,6 @@ object FrmCadPadrao: TFrmCadPadrao
         Height = 303
         Align = alClient
         TabOrder = 1
-        ExplicitTop = 113
-        ExplicitHeight = 279
       end
     end
     object TSPesquisa: TTabSheet
@@ -162,6 +166,7 @@ object FrmCadPadrao: TFrmCadPadrao
           Width = 382
           Height = 23
           Anchors = [akLeft, akTop, akRight]
+          CharCase = ecUpperCase
           TabOrder = 1
         end
         object CbxPesCriterio: TComboBox
@@ -184,8 +189,6 @@ object FrmCadPadrao: TFrmCadPadrao
         Height = 343
         Align = alClient
         TabOrder = 1
-        ExplicitLeft = -40
-        ExplicitTop = 39
         object DBGPesPesquisar: TDBGrid
           Left = 1
           Top = 1
