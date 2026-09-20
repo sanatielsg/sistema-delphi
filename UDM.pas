@@ -104,23 +104,29 @@ end;
 
 procedure TDM.ExecutarComando(aComando: String);
 begin
- Qry.Close;
- Qry.SQL.Clear;
- try
+  Qry.Close;
+  Qry.SQL.Clear;
+  try
    Qry.ExecSQL(aComando);
- except
- end;
+  except
+  end;
 end;
 
 function TDM.ExisteTabela(aTabela: String): Boolean;
 begin
- Result := False;
- Qry.Close;
- Qry.SQL.Clear;
- Qry.SQL.Add('SELECT COUNT(*) as QT FROM RDB$RELATIONS WHERE RDB$RELATION_NAME = :tabela AND RDB$SYSTEM_FLAG = 0');
- Qry.ParamByName('tabela').AsString := aTabela;
- Qry.Open();
- Result := Qry.FieldByName('QT').AsInteger > 0;
+  Result := False;
+  Qry.Close;
+  Qry.SQL.Clear;
+  var cSQL := '''
+    SELECT COUNT(*) as QT
+    FROM RDB$RELATIONS
+    WHERE RDB$RELATION_NAME = :tabela
+    AND RDB$SYSTEM_FLAG = 0
+ ''';
+  Qry.SQL.Add(cSQL);
+  Qry.ParamByName('tabela').AsString := aTabela;
+  Qry.Open();
+  Result := Qry.FieldByName('QT').AsInteger > 0;
 end;
 
 function TDM.GetVersaoDB: Integer;
