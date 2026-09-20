@@ -23,7 +23,8 @@ uses
   UDM in 'UDM.pas' {DM: TDataModule},
   USobre in 'USobre.pas' {FrmSobre},
   UFrmCadPadrao in 'UFrmCadPadrao.pas' {FrmCadPadrao},
-  UFrmCadEmpresas in 'UFrmCadEmpresas.pas' {FrmCadEmpresas};
+  UFrmCadEmpresas in 'UFrmCadEmpresas.pas' {FrmCadEmpresas},
+  UFrmRelEmpresas in 'UFrmRelEmpresas.pas' {FrmRelEmpresas};
 
 {$R *.res}
 
@@ -34,5 +35,6 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrmCadPadrao, FrmCadPadrao);
   Application.CreateForm(TFrmCadEmpresas, FrmCadEmpresas);
+  Application.CreateForm(TFrmRelEmpresas, FrmRelEmpresas);
   Application.Run;
 end.

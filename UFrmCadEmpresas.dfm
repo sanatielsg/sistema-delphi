@@ -3,6 +3,7 @@ inherited FrmCadEmpresas: TFrmCadEmpresas
   StyleElements = [seFont, seClient, seBorder]
   TextHeight = 15
   inherited PageControl: TPageControl
+    ActivePage = TSPesquisa
     inherited TSCadastro: TTabSheet
       inherited PnlCadTop: TPanel
         StyleElements = [seFont, seClient, seBorder]
@@ -12,8 +13,6 @@ inherited FrmCadEmpresas: TFrmCadEmpresas
       end
       inherited PnlCadForm: TPanel
         StyleElements = [seFont, seClient, seBorder]
-        ExplicitTop = 89
-        ExplicitHeight = 303
       end
     end
     inherited TSPesquisa: TTabSheet
@@ -24,12 +23,14 @@ inherited FrmCadEmpresas: TFrmCadEmpresas
         end
         inherited CbxPesCriterio: TComboBox
           StyleElements = [seFont, seClient, seBorder]
+          Items.Strings = (
+            'C'#243'digo'
+            'Raz'#227'o Social'
+            'Nome Fantasia')
         end
       end
       inherited Panel2: TPanel
         StyleElements = [seFont, seClient, seBorder]
-        ExplicitLeft = 0
-        ExplicitTop = 49
         inherited DBGPesPesquisar: TDBGrid
           DataSource = DM.DSQryPesEmpresas
           Columns = <
