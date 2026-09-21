@@ -117,13 +117,12 @@ begin
   Result := False;
   Qry.Close;
   Qry.SQL.Clear;
-  var cSQL := '''
+  Qry.SQL.Add('''
     SELECT COUNT(*) as QT
     FROM RDB$RELATIONS
     WHERE RDB$RELATION_NAME = :tabela
     AND RDB$SYSTEM_FLAG = 0
- ''';
-  Qry.SQL.Add(cSQL);
+  ''');
   Qry.ParamByName('tabela').AsString := aTabela;
   Qry.Open();
   Result := Qry.FieldByName('QT').AsInteger > 0;
