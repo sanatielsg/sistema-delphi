@@ -33,8 +33,5 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.CreateForm(TDM, DM);
-  Application.CreateForm(TFrmCadPadrao, FrmCadPadrao);
-  Application.CreateForm(TFrmCadEmpresas, FrmCadEmpresas);
-  Application.CreateForm(TFrmRelEmpresas, FrmRelEmpresas);
   Application.Run;
 end.
