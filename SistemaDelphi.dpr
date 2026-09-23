@@ -24,7 +24,8 @@ uses
   USobre in 'USobre.pas' {FrmSobre},
   UFrmCadPadrao in 'UFrmCadPadrao.pas' {FrmCadPadrao},
   UFrmCadEmpresas in 'UFrmCadEmpresas.pas' {FrmCadEmpresas},
-  UFrmRelEmpresas in 'UFrmRelEmpresas.pas' {FrmRelEmpresas};
+  UFrmRelEmpresas in 'UFrmRelEmpresas.pas' {FrmRelEmpresas},
+  UUtil in 'UUtil.pas';
 
 {$R *.res}
 

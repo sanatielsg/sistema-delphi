@@ -9,7 +9,6 @@ object DM: TDM
       'Protocol=TCPIP'
       'Server=127.0.0.1'
       'Port=3050'
-      'Database=C:\sistema-delphi\db\BANCO504.FDB'
       'DriverID=FB')
     LoginPrompt = False
     Left = 40
@@ -21,7 +20,6 @@ object DM: TDM
     Top = 200
   end
   object DriverLink: TFDPhysFBDriverLink
-    VendorLib = 'C:\Firebird\Firebird-5.0.4.1812-0-windows-x86\fbclient.dll'
     Left = 40
     Top = 112
   end
@@ -29,8 +27,8 @@ object DM: TDM
     Connection = Con
     SQL.Strings = (
       'SELECT * FROM EMPRESAS')
-    Left = 144
-    Top = 40
+    Left = 192
+    Top = 32
     object QryPesEmpresasEMP_ID: TIntegerField
       FieldName = 'EMP_ID'
       Origin = 'EMP_ID'
@@ -64,7 +62,7 @@ object DM: TDM
   end
   object DSQryPesEmpresas: TDataSource
     DataSet = QryPesEmpresas
-    Left = 152
-    Top = 96
+    Left = 192
+    Top = 104
   end
 end

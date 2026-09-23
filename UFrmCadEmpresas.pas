@@ -7,10 +7,14 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UFrmCadPadrao, Vcl.ComCtrls, Data.DB,
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls
   , UDM
+  , UUTil
   ;
 
 type
   TFrmCadEmpresas = class(TFrmCadPadrao)
+    EdtcadRazaoSocial: TEdit;
+    Label1: TLabel;
+    procedure BtnCadNovoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,5 +27,11 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmCadEmpresas.BtnCadNovoClick(Sender: TObject);
+begin
+  inherited;
+  TUtil.LimparForm(PnlCadForm);
+end;
 
 end.
