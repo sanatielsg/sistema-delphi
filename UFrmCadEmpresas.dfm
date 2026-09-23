@@ -3,7 +3,6 @@ inherited FrmCadEmpresas: TFrmCadEmpresas
   StyleElements = [seFont, seClient, seBorder]
   TextHeight = 15
   inherited PageControl: TPageControl
-    ActivePage = TSPesquisa
     inherited TSCadastro: TTabSheet
       inherited PnlCadTop: TPanel
         StyleElements = [seFont, seClient, seBorder]
@@ -13,6 +12,21 @@ inherited FrmCadEmpresas: TFrmCadEmpresas
       end
       inherited PnlCadForm: TPanel
         StyleElements = [seFont, seClient, seBorder]
+        object Label1: TLabel
+          Left = 12
+          Top = 16
+          Width = 65
+          Height = 15
+          Caption = 'Raz'#227'o Social'
+        end
+        object EdtcadRazaoSocial: TEdit
+          Left = 12
+          Top = 37
+          Width = 581
+          Height = 23
+          CharCase = ecUpperCase
+          TabOrder = 0
+        end
       end
     end
     inherited TSPesquisa: TTabSheet
